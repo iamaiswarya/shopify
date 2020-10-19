@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:udaan/menudrawer.dart';
+import 'package:udaan/communicationprofile.dart';
 
 class Alerts extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class _AlertsState extends State<Alerts> {
       drawer: MenuDrawer(),
        appBar: AppBar(title: Text('Alerts',style: TextStyle(fontFamily: 'chilanka')),backgroundColor: Colors.red,
        actions: <Widget>[IconButton(icon: Icon(Icons.settings,color: Colors.white,),  onPressed: (){
-          Navigator.pushNamed(context, '/communicationprofile');})],),
+          Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Communicationprofile()));})],),
    
 
                   );

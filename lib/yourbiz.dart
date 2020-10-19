@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:udaan/connections.dart';
 import 'package:udaan/menudrawer.dart';
 import 'package:udaan/orderforms.dart';
+
 
 class Yourbiz extends StatelessWidget {
   @override
@@ -21,7 +23,7 @@ class Yourbiz extends StatelessWidget {
       child: Text("HELP"),color: Colors.white
     ),
         ),IconButton(icon: Icon(Icons.shopping_cart,color: Colors.white,),  onPressed: (){
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => Orderforms()));}),
+            Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Orderforms()));}),
             ],
       
      ),
@@ -119,7 +121,7 @@ class Yourbiz extends StatelessWidget {
                 ),  
                 GestureDetector(
                   onTap: (){
-           Navigator.pushNamed(context, '/connections');},
+           Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Connections()));},
                                   child: Container(
                     child: Column(children: <Widget>[  
                       Padding(padding: EdgeInsets.fromLTRB(70, 0, 0, 0)),

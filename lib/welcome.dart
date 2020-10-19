@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:udaan/navbar.dart';
 
 class Welcome extends StatelessWidget {
   @override
@@ -73,7 +74,7 @@ class Welcome extends StatelessWidget {
                       width: double.infinity,
                       child: RaisedButton(
                         padding: EdgeInsets.all(10.0),
-                        onPressed: () {},
+                        onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Navbar()));},
                         child: Text(
                           "Get Started",
                           style: TextStyle(

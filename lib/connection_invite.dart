@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:udaan/permissions.dart';
 
 class Connectioninvite extends StatelessWidget {
   @override
@@ -30,7 +31,7 @@ class Connectioninvite extends StatelessWidget {
        ),
 ),
      ),
-                  ListTile(onTap: (){ Navigator.pushNamed(context, '/permissions');},
+                  ListTile(onTap: (){  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Permissions()));},
         leading: Icon(Icons.add_circle_outline_rounded,color: Colors.blue),
         
         title: Text(' Invite from Contacts',style: TextStyle(color: Colors.blue,fontSize: 15,fontWeight: FontWeight.bold),),

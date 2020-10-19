@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:udaan/orderforms.dart';
+import 'package:udaan/connection_request.dart';
+import 'package:udaan/connection_bussiness.dart';
+import 'package:udaan/connection_invite.dart';
+
 
 class Connections extends StatelessWidget {
   @override
@@ -18,7 +22,7 @@ class Connections extends StatelessWidget {
         title:
          Text('Connection',style: TextStyle(color: Colors.white),),
          actions: <Widget>[IconButton(icon: Icon(Icons.shopping_cart,color: Colors.white,), onPressed: (){
-           Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => Orderforms()));
+           Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Orderforms()));
           } )],
      ),
      body:
@@ -33,7 +37,7 @@ class Connections extends StatelessWidget {
         subtitle: Text('View people you are connected with',style: TextStyle(fontSize: 10),),
         trailing: Icon(Icons.chevron_right),
         onTap: (){
-          Navigator.pushNamed(context, '/bussiness');
+         Navigator.push(context,MaterialPageRoute(builder: (BuildContext context) => Connectionbussiness()));
         },
       ),
        Container(
@@ -46,7 +50,7 @@ class Connections extends StatelessWidget {
         subtitle: Text('Accept request to add to bussiness connection',style: TextStyle(fontSize: 10),),
         trailing: Icon(Icons.chevron_right),
         onTap: (){
-        Navigator.pushNamed(context, '/request');
+        Navigator.push(context,MaterialPageRoute(builder: (BuildContext context) => Connectionrequest()));
         },
       ),
       Container(
@@ -59,7 +63,7 @@ class Connections extends StatelessWidget {
         subtitle: Text('Connect with new businesses',style: TextStyle(fontSize: 10),),
         trailing: Icon(Icons.chevron_right),
          onTap: (){
-          Navigator.pushNamed(context, '/invite');
+           Navigator.push(context,MaterialPageRoute(builder: (BuildContext context) => Connectioninvite()));
         },
       ),
        Container(

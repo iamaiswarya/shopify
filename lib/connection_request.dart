@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:udaan/connections.dart';
 
 class Connectionrequest extends StatelessWidget {
   @override
