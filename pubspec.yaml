@@ -51,6 +51,17 @@ flutter:
     - assets/splash.jpg
     - assets/udaanicon.jpg
     - assets/mobile.jpg
+    - assets/profile.png
+    - assets/shop.jpg
+    - assets/pro.png
+    - assets/pro1.png
+    - assets/pro3.png
+    - assets/Eng.png
+    - assets/Hindi.png
+    - assets/Kannada.png
+    - assets/telugu.png
+    - assets/eg.png
+    - assets/Tamil.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

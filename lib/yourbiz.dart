@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:udaan/connections.dart';
 import 'package:udaan/menudrawer.dart';
 import 'package:udaan/orderforms.dart';
+import 'package:udaan/Account.dart';
 
 
 class Yourbiz extends StatelessWidget {
@@ -65,7 +66,8 @@ class Yourbiz extends StatelessWidget {
                     ]),
                   ),
                 ),  
-                 GestureDetector(onTap: (){},
+                 GestureDetector(onTap: (){
+           Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Account()));},
                                   child: Container(
                     child: Column(children: <Widget>[  
                       Padding(padding: EdgeInsets.fromLTRB(70, 0, 0, 0)),
