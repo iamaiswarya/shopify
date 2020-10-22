@@ -4,7 +4,6 @@ import 'package:udaan/menudrawer.dart';
 import 'package:udaan/orderforms.dart';
 import 'package:udaan/Account.dart';
 
-
 class Yourbiz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -62,12 +61,12 @@ class Yourbiz extends StatelessWidget {
                           size: 40  
                         ),
                       ),  
-                      Text('UdaanPa',style: TextStyle(fontSize: 12,fontFamily: 'chilanka'),),  
+                      Text('UdaanPay',style: TextStyle(fontSize: 12,fontFamily: 'chilanka'),),  
                     ]),
                   ),
                 ),  
                  GestureDetector(onTap: (){
-           Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Account()));},
+ Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Account()));},
                                   child: Container(
                     child: Column(children: <Widget>[  
                       Padding(padding: EdgeInsets.fromLTRB(70, 0, 0, 0)),
@@ -101,9 +100,9 @@ class Yourbiz extends StatelessWidget {
             ),  
           )  ,
            Container(  
-          padding: EdgeInsets.all(30),  
+           padding: EdgeInsets.fromLTRB(20, 30, 10, 0), 
           child: Row(  
-              mainAxisAlignment: MainAxisAlignment.start,  
+              mainAxisAlignment: MainAxisAlignment.spaceAround,  
               
               children: <Widget>[  
                 GestureDetector(onTap: (){},
@@ -138,7 +137,20 @@ class Yourbiz extends StatelessWidget {
                     ]),
                   ),
                 ),  
-                 
+                  Container(
+                    child: Column(children: <Widget>[  
+                      Padding(padding: EdgeInsets.fromLTRB(70, 0, 0, 0)),
+                      Container(height: 60,width: 60, 
+                      ),  
+                    ]),
+                  ),
+                Container(
+                    child: Column(children: <Widget>[  
+                      Padding(padding: EdgeInsets.fromLTRB(70, 0, 0, 0)),
+                      Container(height: 60,width: 60,),    
+                    ]),
+                  ),
+                  
                   
               ]  
             ),  

@@ -1,10 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:udaan/verifyotp.dart';
 
 class Mobilenumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(      
       backgroundColor: Colors.white,
+      bottomNavigationBar: BottomAppBar(
+        child: Padding(
+          padding:const EdgeInsets.fromLTRB(20, 5, 20, 5),
+          child:RaisedButton(
+                        padding: EdgeInsets.all(10.0),
+                        onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Verifyotp()));},
+                        child: Text(
+                          "GET VERIFICATION CODE",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        color: Colors.blue,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(5.0),
+                            side: BorderSide(color: Colors.blueAccent),
+                      ),                   
+                    ), ),),
       body: 
       SingleChildScrollView(
         child:ConstrainedBox(constraints: BoxConstraints(),
@@ -56,7 +78,7 @@ class Mobilenumber extends StatelessWidget {
 
              Container(
                       padding: EdgeInsets.all(20),
-                      child: TextField(
+                      child: TextField(keyboardType: TextInputType.number,inputFormatters: [LengthLimitingTextInputFormatter(10)],
                         showCursor: true,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
@@ -81,32 +103,11 @@ class Mobilenumber extends StatelessWidget {
                       ),
                     ),
 
-                    SizedBox(
+                    SizedBox( 
                       height: 10,
                     ),
-                     Container(
-                      padding: EdgeInsets.fromLTRB(30, 100, 30, 20),
-                      width: double.infinity,
-                      child: RaisedButton(
-                        padding: EdgeInsets.all(10.0),
-                        onPressed: () {},
-                        child: Text(
-                          "GET VERIFICATION CODE",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                        color: Colors.blue,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(5.0),
-                            side: BorderSide(color: Colors.blueAccent),
-                      ),
-                      
-                    ),
-
-          )]  )) 
+                    
+                     ]  )) 
               ),
        );   
                    

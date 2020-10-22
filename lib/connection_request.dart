@@ -11,8 +11,8 @@ class Connectionrequest extends StatelessWidget {
             Navigator.pop(context);
           }),
           backgroundColor: Colors.red,
-          title: new Text('Connection Request'),
-        ),
+          title: new Text('Connection Requests',style: TextStyle(fontWeight: FontWeight.bold,fontFamily: 'chilanka'),),),
+        
         body: new DefaultTabController(
           length: 2,
           child: new Column(
@@ -33,8 +33,19 @@ class Connectionrequest extends StatelessWidget {
               new Expanded(
                 child: new TabBarView(
                   children: [
-                    new Text("There are no pending Connected Request that you've received"),
-                    new Text("There are no pending Connected Request that you've sent"),
+                    Column(
+                      children: [
+                        Container(child: new Text("There are no pending Connected Request that you've received"),
+                        height:50,color: Colors.grey[200],
+                        ), 
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(child: new Text("There are no pending Connected Request that you've sent"),
+                         height:50,color: Colors.grey[200],),
+                      ],
+                    ),
                   ],
                 ),
               ),
