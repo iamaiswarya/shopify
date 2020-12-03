@@ -21,7 +21,7 @@ class ActiveSession extends StatelessWidget  {
            IconButton(
             icon: Icon(Icons.shopping_cart),
             onPressed: (){},
-            )
+            ),
         ],
       
           ),
@@ -110,7 +110,7 @@ Padding(
                   
   
    textDirection: TextDirection.ltr,
-border:TableBorder.all(width: 1.0,color: Colors.grey[200]),
+  border:TableBorder.all(width: 1.0,color: Colors.grey[200]),
               children: [ 
   
                 TableRow( 

@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
-class EmailAccount extends StatelessWidget  {
+class BusinessName extends StatelessWidget  {
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class EmailAccount extends StatelessWidget  {
 
         appBar: AppBar(
           backgroundColor: Colors.redAccent,
-          title: Text('Email Account',
+          title: Text('Business Name',
           style: TextStyle(fontFamily: 'Chilanka'),),
           actions: [
              FlatButton(
@@ -33,10 +33,11 @@ class EmailAccount extends StatelessWidget  {
         body: SingleChildScrollView(
           child: ConstrainedBox(constraints: BoxConstraints(),
           child:  Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
   
           children: [
-                SizedBox(height: 15),
+                SizedBox(height:25),
            Container(
              color: Colors.white,
              child: ListTile(
@@ -49,7 +50,7 @@ class EmailAccount extends StatelessWidget  {
                                   icon: Icon(Icons.mail,
                                 color: Colors.grey,), 
                                 
-                                hintText: 'eg:my.email@domain.com',
+                                hintText: 'Name',
                                 filled: true,
                                
                                 fillColor: Colors.white,
@@ -71,6 +72,47 @@ class EmailAccount extends StatelessWidget  {
                          
                           ),
            ),
+           Container(
+                               color: Colors.grey[200],
+                        
+                      
+                        child: SizedBox(
+                          
+                              child: Padding(
+                                  padding: const EdgeInsets.fromLTRB(20, 5, 0, 5),
+                              
+                                child: Text(
+                                  'Verify your Business',
+                                   style: TextStyle(fontFamily: 'Chilanka',
+                                   fontWeight: FontWeight.bold,
+                                  fontSize: 13),
+                                ),
+                              ),
+                             
+                        ),
+                    
+                           ),
+                          
+                            Container(
+                               color: Colors.grey[200],
+                             child: Padding(
+                        padding:  EdgeInsets.fromLTRB(0.0, 1.0, 5.0, 10.0),
+                        child: SizedBox(
+                          
+                              child: Padding(
+                                padding: const EdgeInsets.fromLTRB(20, 5, 0, 5),
+                                child: Text(
+                                  'Get your business verified to Business badage, and access to exclusive product and services',
+                                   style: TextStyle(fontFamily: 'Chilanka',
+                                   color: Colors.grey[800],
+                                  
+                                  fontSize: 13),
+                                ),
+                              ),
+                             
+                        ),
+                      ),
+                           ),
 
           ],
         ),

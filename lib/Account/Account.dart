@@ -24,7 +24,7 @@ class Account extends StatelessWidget {
            IconButton(
             icon: Icon(Icons.shopping_cart),
             onPressed: (){},
-            )
+            ),
         ],
       
       ),

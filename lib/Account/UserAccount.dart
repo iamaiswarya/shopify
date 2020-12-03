@@ -2,12 +2,32 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'EmailAccount.dart';
-import 'Name.dart';
-void main() => runApp(MaterialApp(
-  home: UserAccount(),
-));
+import 'package:udaan/Account/PermissionCamra.dart';
+import 'package:udaan/Account/PermissionsGallery.dart';
+import 'package:udaan/Home/permissions.dart';
+import 'UserAccountSUBPages/EmailAccount.dart';
+import 'UserAccountSUBPages/Name.dart';
+
 class UserAccount extends StatelessWidget  {
+  
+   void _showMultiSelect(BuildContext context) async {
+    final items = <MultiSelectDialogItem<int>>[
+      MultiSelectDialogItem(1, 'I understand that all the orders and transations history in this account will be deleted.',
+          " "),
+      
+    ];
+      final selectedValues = await showDialog<Set<int>>(
+      context: context,
+      builder: (BuildContext context) {
+        return MultiSelectDialog(
+          items: items,
+          //  initialSelectedValues: [1, 3].toSet(),
+        );
+      },
+    );
+    print(selectedValues);
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +87,7 @@ class UserAccount extends StatelessWidget  {
                             child: CircleAvatar(
                             radius: 20,
                             
-                            backgroundImage: AssetImage("assets/pro1.png",
+                            backgroundImage: AssetImage("assets/account/pro1.png",
                             )
                             )
                           ),
@@ -352,11 +372,11 @@ class UserAccount extends StatelessWidget  {
                    padding: const EdgeInsets.fromLTRB(20, 5, 20, 8),
                       child: RaisedButton(
                           color: Colors.redAccent,
-                          onPressed:(){},
+                           onPressed: () => _showMultiSelect(context),
                           child: Text(
                             'DELETE MY ACCOUNT',
                             style: TextStyle(color: Colors.white,
-                               fontFamily: 'Chilanka',
+                              //  fontFamily: 'Chilanka',
                             fontWeight: FontWeight.bold),
                           ),
                           ),
@@ -395,7 +415,7 @@ class UserAccount extends StatelessWidget  {
       );
 
   }
- 
+ //Alerbox camer and gallery
    void _showModalSheet(context) {
       showModalBottomSheet(
           context: context,
@@ -408,7 +428,9 @@ class UserAccount extends StatelessWidget  {
                 children: [
                   TextButton(
                       onPressed: () {
-              //  getImageCamera();
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => PermissionsUdaan(
+             
+              )));
                   },
           
                  child: Padding(
@@ -422,7 +444,9 @@ class UserAccount extends StatelessWidget  {
 
                   TextButton(
                      onPressed: () {
-              //  getImageGallery();
+            Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => PermissionsGallery(
+             
+              )));
                 },
               
                  child: Padding(
@@ -500,6 +524,108 @@ class UserAccount extends StatelessWidget  {
     },
   );
 }
+
 }
+
+class MultiSelectDialogItem<V> {
+  const MultiSelectDialogItem(this.value, this.label, this.hello);
+
+  final V value;
+  final String label;
+  final String hello;
+}
+
+class MultiSelectDialog<V> extends StatefulWidget {
+  MultiSelectDialog({Key key, this.items, this.initialSelectedValues})
+      : super(key: key);
+
+  final List<MultiSelectDialogItem<V>> items;
+
+  final Set<V> initialSelectedValues;
+
+  @override
+  State<StatefulWidget> createState() => _MultiSelectDialogState<V>();
+}
+
+class _MultiSelectDialogState<V> extends State<MultiSelectDialog<V>> {
+  final _selectedValues = Set<V>();
+
+  void initState() {
+    super.initState();
+    if (widget.initialSelectedValues != null) {
+      _selectedValues.addAll(widget.initialSelectedValues);
+    }
+  }
+
+  void _onItemCheckedChange(V itemValue, bool checked) {
+    setState(() {
+      if (checked) {
+        _selectedValues.add(itemValue);
+      } else {
+        _selectedValues.remove(itemValue);
+      }
+    });
+  }
+
+  void _onSubmitTap() {
+    Navigator.pop(context, _selectedValues);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: Text('Acknowledgement',
+       style: TextStyle(
+             fontSize: 17
+                                ),),
+      contentPadding: EdgeInsets.only(top: 14.0),
+      content: SingleChildScrollView(
+        child: ListTileTheme(
+          // contentPadding: EdgeInsets.fromLTRB(14.0, 1.0, 20.0, 1.0),
+          child: ListBody(
+            children: widget.items.map(_buildItem).toList(),
+          ),
+        ),
+      ),
+      actions: <Widget>[
+        RaisedButton(
+          padding: EdgeInsets.fromLTRB(60, 10, 60, 10),
+          onPressed: () {
+              Navigator.of(context).pop(null);
+          
+          },
+          child: Text(
+            "Accept & Conditions",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          color: Colors.blue,
+          shape: RoundedRectangleBorder(
+            borderRadius: new BorderRadius.circular(5.0),
+            side: BorderSide(color: Colors.blueAccent),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildItem(MultiSelectDialogItem<V> item) {
+    final checked = _selectedValues.contains(item.value);
+    return CheckboxListTile(
+      value: checked,
+      title: Text(item.label),
+      subtitle: Text(
+        item.hello,
+        style: TextStyle(fontSize: 12),
+      ),
+      controlAffinity: ListTileControlAffinity.leading,
+      onChanged: (checked) => _onItemCheckedChange(item.value, checked),
+    );
+  }
+}
+
 
 

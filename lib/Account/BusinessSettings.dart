@@ -2,6 +2,10 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:udaan/Account/BusinessSettingsSUBPages/ManageAddresses.dart';
+import 'package:udaan/Account/BusinessSettingsSUBPages/ManageBankAccount.dart';
+import 'package:udaan/Account/BusinessSettingsSUBPages/ManagePAN&GSTIN.dart';
+import 'package:udaan/Account/BusinessSettingsSUBPages/ManageVacation.dart';
 
 void main() => runApp(MaterialApp(
   home: BusinessSettings(),
@@ -79,7 +83,9 @@ class BusinessSettings extends StatelessWidget  {
                         ),
                     
                        ListTile(
-                    
+                        onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ManageAddresess()));
+                        },
                      
                            
                             title: 
@@ -87,12 +93,12 @@ class BusinessSettings extends StatelessWidget  {
                             TextField(
                               
                                  decoration: InputDecoration(
-                                   
+                                     border: InputBorder.none, 
                                   icon: Icon(Icons.location_on,
                                 color: Colors.grey,), 
                                 
                                 hintText: 'Primary Address',
-                         
+                                enabled: false,
 
                                 enabledBorder: OutlineInputBorder(
                                   // borderRadius: BorderRadius.all(Radius.circular(8.0)),
@@ -128,7 +134,9 @@ class BusinessSettings extends StatelessWidget  {
                       ),
                            
                  ListTile(
-                    
+                    onTap: (){
+                       Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ManageBankAccount()));
+                    },
                      
                            
                             title: TextField(
@@ -136,7 +144,7 @@ class BusinessSettings extends StatelessWidget  {
                                    
                                   icon: Icon(Icons.home,
                                 color: Colors.grey,), 
-                                
+                                enabled: false,
                                 hintText: 'Tap to add',
                                 filled: true,
                                 fillColor: Colors.white,
@@ -175,14 +183,16 @@ class BusinessSettings extends StatelessWidget  {
                            
                  ListTile(
                     
-                     
+                     onTap: (){
+                       Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ManagePANGSTIN()));
+                     },
                            
                             title: TextField(
                                  decoration: InputDecoration(
                                    
                                   icon: Icon(Icons.add,
                                 color: Colors.grey,), 
-                                
+                                enabled: false,
                                 hintText: 'Add PAN/ Add GSTIN',
                                 filled: true,
                                 fillColor: Colors.white,
@@ -220,7 +230,9 @@ class BusinessSettings extends StatelessWidget  {
                       ),
                           
                       ListTile(
-                    
+                      onTap: (){
+                     Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ManageVacation()));
+                      },
                      
                            
                             title: TextField(
@@ -228,7 +240,7 @@ class BusinessSettings extends StatelessWidget  {
                                    
                                   icon: Icon(Icons.calendar_today,
                                 color: Colors.grey,), 
-                                
+                                enabled: false,
                                 hintText: 'Tap to add',
                                 filled: true,
                                 fillColor: Colors.white,

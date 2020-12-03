@@ -36,7 +36,7 @@ class Name extends StatelessWidget  {
             mainAxisAlignment: MainAxisAlignment.end,
   
           children: [
-                SizedBox(height:15),
+                SizedBox(height:25),
            Container(
              color: Colors.white,
              child: ListTile(

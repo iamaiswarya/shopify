@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
-
+import 'package:udaan/Account/BusinessDetailsSUBPages/BusinessType.dart';
+import 'package:udaan/Account/BusinessDetailsSUBPages/CompleteShopKYC.dart';
+import 'package:udaan/Account/BusinessDetailsSUBPages/Description.dart';
+import 'package:udaan/Account/BusinessDetailsSUBPages/EstablishmentYear.dart';
+import 'package:udaan/Account/BusinessDetailsSUBPages/ManageMediaGallery.dart';
+import 'package:udaan/Account/PermissionCamra.dart';
+import 'package:udaan/Account/PermissionsGallery.dart';
+import 'BusinessDetailsSUBPages/BusinessName.dart';
 
 void main() => runApp(MaterialApp(
  home: BusinessDetails(),
@@ -37,32 +44,43 @@ class BusinessDetails extends StatelessWidget {
                       children: [
                          Container(
                       color: Colors.grey[200],
-                                          child: Container(
+                      child: GestureDetector(
+                                     onTap: (){
+                                _showModalSheet(context);
+                                 },
+
+                       child: Container(
                         height: 150,width: 150,
                         decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.grey[200]),
                         child: CircleAvatar(
                         radius: 20,
                         
-                        backgroundImage: AssetImage("assets/pro1.png",
+                        backgroundImage: AssetImage("assets/account/pro1.png",
                         )
                         )
                       ),
+                                          ),
   
                     ),
                  Container(
                    color: Colors.grey[200],
                    child: Padding(
                      padding: const EdgeInsets.fromLTRB(69.0, 5.0, 69.0, 5.0),
-                     child: RaisedButton(
-                      shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: BorderSide(color: Colors.grey[800])),
-                       onPressed: () {},
-                      color: Colors.grey[800],
-                       textColor: Colors.white,
-                      child: Text("Edit",
-                      style: TextStyle(fontSize: 14)),
+                     child: GestureDetector(
+                                       onTap: (){
+                                _showModalSheet(context);
+                                 },
+                        child: RaisedButton(
+                        shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                        side: BorderSide(color: Colors.grey[800])),
+                         onPressed: () {},
+                        color: Colors.grey[800],
+                         textColor: Colors.white,
+                        child: Text("Edit",
+                        style: TextStyle(fontSize: 14)),
     ),
+                     ),
                    ),
                  ),
                         
@@ -87,7 +105,10 @@ class BusinessDetails extends StatelessWidget {
                         ),
                     
                        ListTile(
-                    
+                        onTap: (){
+           Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => BusinessName()));
+
+                        },
                      
                            
                             title: 
@@ -95,12 +116,12 @@ class BusinessDetails extends StatelessWidget {
                             TextField(
                               
                                  decoration: InputDecoration(
-                                   
+                                   border: InputBorder.none,
                                   icon: Icon(Icons.home_outlined,
                                 color: Colors.grey,), 
                                 
                                 hintText: 'Name',
-                         
+                                enabled: false,
 
                                 enabledBorder: OutlineInputBorder(
                                   // borderRadius: BorderRadius.all(Radius.circular(8.0)),
@@ -169,7 +190,9 @@ class BusinessDetails extends StatelessWidget {
                           child:
                             RaisedButton(
                     color: Colors.blueAccent,
-                    onPressed:(){},
+                    onPressed:(){
+                 Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => CompleteShopKYC()));
+                    },
                     child: Text(
                       'Verify Now',
                       style: TextStyle(color: Colors.white,
@@ -203,12 +226,14 @@ class BusinessDetails extends StatelessWidget {
                            
                  ListTile(
                     
-                     
+                     onTap: (){
+                 Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ManageMedia()));
+                     },
                            
                             title: TextField(
                                  decoration: InputDecoration(
                               
-                                
+                                enabled: false,
                                 hintText: 'New! Add Photo/ video to profile',
                                 filled: true,
                                 fillColor: Colors.white,
@@ -247,7 +272,9 @@ class BusinessDetails extends StatelessWidget {
                       ),
                           
                       ListTile(
-                    
+                    onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => EstablishmentYear()));
+                    },
                      
                            
                             title: TextField(
@@ -255,7 +282,7 @@ class BusinessDetails extends StatelessWidget {
                                    
                                   icon: Icon(Icons.calendar_today,
                                 color: Colors.grey,), 
-                                
+                                enabled: false,
                                 hintText: 'Select Year',
                                 filled: true,
                                 fillColor: Colors.white,
@@ -296,12 +323,14 @@ class BusinessDetails extends StatelessWidget {
                           
                       ListTile(
                     
-                     
+                     onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => BusinessType()));
+                     },
                            
                             title: TextField(
                                  decoration: InputDecoration(
                             
-                                
+                                enabled: false,
                                 hintText: 'Select Business Type',
                                 filled: true,
                                 fillColor: Colors.white,
@@ -342,14 +371,16 @@ class BusinessDetails extends StatelessWidget {
                         
                       ListTile(
                     
-                     
+                       onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Description()));      
+                       },
                            
                             title: TextField(
                                  decoration: InputDecoration(
                                    
                                hintText: ' Add Description',
                                 
-                            
+                                enabled: false,
                                 filled: true,
                                 fillColor: Colors.white,
 
@@ -397,4 +428,52 @@ class BusinessDetails extends StatelessWidget {
       
     );
   }
+   //Alerbox camer and gallery
+ void _showModalSheet(context) {
+      showModalBottomSheet(
+          context: context,
+          builder: (builder) {
+            return Container(
+               height:100,
+              child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+               
+                children: [
+                  TextButton(
+                      onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => PermissionsUdaan(
+             
+              )));
+                  },
+          
+                 child: Padding(
+                   padding: const EdgeInsets.only(left:15.0),
+                   child: Text("Camera",
+                        style: TextStyle(color: Colors.black),
+                            ),
+                 ),
+
+                  ),
+
+                  TextButton(
+                     onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => PermissionsGallery(
+             
+              )));
+                },
+              
+                 child: Padding(
+                   padding: const EdgeInsets.only(left:15.0),
+                   child: Text(
+                        "Gallery",
+                        style: TextStyle(color: Colors.black),
+                          ),
+                 ),
+                  ),
+              ],
+                
+              ),
+            );
+          });
+    }
 }

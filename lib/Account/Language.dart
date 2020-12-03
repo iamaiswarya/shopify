@@ -126,7 +126,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     child: Image(
       height: 30,
       width: 30,
-      image: AssetImage("assets/Eng.png"),
+      image: AssetImage("assets/account/Eng.png"),
 
     ),
 
@@ -151,7 +151,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     child: Image(
       height: 30,
       width: 30,
-      image: AssetImage("assets/Hindi.png"),
+      image: AssetImage("assets/account/Hindi.png"),
 
     ),
 
@@ -176,7 +176,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     child: Image(
       height: 30,
       width: 30,
-      image: AssetImage("assets/Kannada.png"),
+      image: AssetImage("assets/account/Kannada.png"),
 
     ),
 
@@ -202,7 +202,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     child: Image(
       height: 30,
       width: 30,
-      image: AssetImage("assets/telugu.png"),
+      image: AssetImage("assets/account/telugu.png"),
 
     ),
 
@@ -228,7 +228,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     child: Image(
       height: 25,
       width: 25,
-      image: AssetImage("assets/Tamil.png"),
+      image: AssetImage("assets/account/Tamil.png"),
 
     ),
 
@@ -254,7 +254,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     child: Image(
       height: 30,
       width: 30,
-      image: AssetImage("assets/Hindi.png"),
+      image: AssetImage("assets/account/Hindi.png"),
 
     ),
 
