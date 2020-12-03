@@ -22,6 +22,10 @@ environment:
 
 dependencies:
   otp_text_field: ^1.0.1
+  flutter_swiper: ^1.1.6
+  fdottedline: ^1.0.1 
+  permission_handler: ^5.0.1+1
+  image_picker: ^0.6.7+12
   flutter:
     sdk: flutter
 
@@ -69,6 +73,25 @@ flutter:
     - assets/Phone.png
     - assets/Plate.jpg
     - assets/Shoe1.jpg
+
+    - assets/kyc/certificate1.jpg
+    - assets/kyc/certificate2.jpg
+    - assets/kyc/certificate3.jpg
+    - assets/kyc/certificate4.jpg
+    - assets/kyc/certificate5.jpg
+    - assets/kyc/certificate6.jpg
+    - assets/kyc/certificate7.jpg
+    - assets/kyc/certificate8.jpg
+    - assets/kyc/certificate9.jpg
+    - assets/kyc/certificate10.jpg
+    - assets/kyc/certificate11.jpg
+    - assets/kyc/certificate12.jpg
+    - assets/kyc/certificate13.jpg
+    - assets/kyc/uploadimage.jpg
+    - assets/kyc/cheque.jpg
+    - assets/kyc/fssai.jpg
+    - assets/kyc/cam.jpg
+    - assets/kyc/doc.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
