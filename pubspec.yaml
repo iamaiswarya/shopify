@@ -1,0 +1,136 @@
+name: udaan
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  otp_text_field: ^1.0.1
+  flutter_swiper: ^1.1.6
+  fdottedline: ^1.0.1 
+  permission_handler: ^5.0.1+1
+  image_picker: ^0.6.7+12
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.3
+  lite_rolling_switch: ^0.1.1
+  intl: ^0.16.1
+  
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/order.jpg
+    - assets/home.jpg
+    - assets/splash.jpg
+    - assets/udaanicon.jpg
+    - assets/mobile.jpg
+    
+    
+   
+    - assets/account/pro1.png
+    - assets/account/Eng.png
+    - assets/account/Hindi.png
+    - assets/account/Kannada.png
+    - assets/account/telugu.png
+    - assets/account/eg.png
+    - assets/account/Tamil.png
+    - assets/account/Bulb.png
+    - assets/account/Cloth.jpg
+    - assets/account/OpenBox.jpg
+    - assets/account/Phone.png
+    - assets/account/Plate.jpg
+    - assets/account/Shoe1.jpg
+    - assets/account/dot.jpg
+    - assets/account/delivery.jpg
+    - assets/account/pancard.jpg
+    - assets/account/invoice.jpg
+    - assets/account/Registration_certificate.png
+    - assets/account/selfi.jpg
+    - assets/account/shopBoards.jpg
+    - assets/account/Bill.jpg
+    - assets/account/AnnexureA.jpg
+    - assets/account/AnnexureB.jpg
+    - assets/account/CorrectImage.jpg
+    - assets/account/chevron_down.jpg
+    - assets/account/CorrectImage1.jpg
+    - assets/account/camera.jpg
+    - assets/account/cam.jpg
+    - assets/account/mens1.jpg
+    - assets/account/mens2.jpg
+    - assets/account/mens3.jpg
+    - assets/account/mens4.jpg
+    
+    - assets/kyc/certificate1.jpg
+    - assets/kyc/certificate2.jpg
+    - assets/kyc/certificate3.jpg
+    - assets/kyc/certificate4.jpg
+    - assets/kyc/certificate5.jpg
+    - assets/kyc/certificate6.jpg
+    - assets/kyc/certificate7.jpg
+    - assets/kyc/certificate8.jpg
+    - assets/kyc/certificate9.jpg
+    - assets/kyc/certificate10.jpg
+    - assets/kyc/certificate11.jpg
+    - assets/kyc/certificate12.jpg
+    - assets/kyc/certificate13.jpg
+    - assets/kyc/uploadimage.jpg
+    - assets/kyc/cheque.jpg
+    - assets/kyc/fssai.jpg
+    - assets/kyc/cam.jpg
+    - assets/kyc/doc.jpg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: chilanka
+      fonts:
+        - asset: fonts/Chilanka-Regular.ttf
+ 
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
