@@ -3,13 +3,13 @@ import 'package:udaan/Home/UdaanHome/FashionQubes.dart';
 import 'package:udaan/Home/UdaanHome/Udaan.dart';
 import 'package:udaan/Home/orderforms.dart';
 
-class Menswear extends StatefulWidget {
+class ViewMensTShirts extends StatefulWidget {
   
   @override
-  _MenswearState createState() => _MenswearState();
+  _ViewMensTShirtsState createState() => _ViewMensTShirtsState();
 }
 
-class _MenswearState extends State<Menswear> {
+class _ViewMensTShirtsState extends State<ViewMensTShirts> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +34,7 @@ class _MenswearState extends State<Menswear> {
              RaisedButton.icon(onPressed: (){},
           color: Colors.white,
            icon: Expanded(child: Icon(Icons.search)), 
-           label: Expanded(child: Text('Menswear')), ),
+           label: Expanded(child: Text('Search',style: TextStyle(color: Colors.grey[400]),)), ),
           ],
                   
         ),
@@ -66,7 +66,7 @@ class _MenswearState extends State<Menswear> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text('32655 items found'),
+                  Text('158 items found'),
                   // SizedBox(width:35),
                   GestureDetector(
                     onTap: (){
@@ -101,7 +101,7 @@ class _MenswearState extends State<Menswear> {
                   Expanded(
                                       child: MenswearCard(
                img: ("assets/account/mens1.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
+                            text1:("Top Hiddle Cotton ... "),
                             text2:("Fashion Qubes "),
                             text3:("Tripur,Tamil Nadu "),
               ),
@@ -109,7 +109,7 @@ class _MenswearState extends State<Menswear> {
                     Expanded(
                                           child: MenswearCard(
                img: ("assets/account/mens2.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
+                            text1:("Top Hiddle Cotton ... "),
                             text2:("Fashion Qubes "),
                             text3:("Tripur,Tamil Nadu"),
               ),
@@ -121,7 +121,7 @@ class _MenswearState extends State<Menswear> {
                   Expanded(
                                       child: MenswearCard(
                img: ("assets/account/mens3.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
+                            text1:("Top Hiddle Cotton ... "),
                             text2:("Fashion Qubes "),
                             text3:("Tripur,Tamil Nadu "),
               ),
@@ -129,7 +129,7 @@ class _MenswearState extends State<Menswear> {
                     Expanded(
                                           child: MenswearCard(
                img: ("assets/account/mens4.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
+                            text1:("Top Hiddle Cotton ... "),
                             text2:("Fashion Qubes "),
                             text3:("Tripur,Tamil Nadu"),
               ),
@@ -141,7 +141,7 @@ class _MenswearState extends State<Menswear> {
                   Expanded(
                                       child: MenswearCard(
                img: ("assets/account/mens1.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
+                            text1:("Top Hiddle Cotton ... "),
                             text2:("Fashion Qubes "),
                             text3:("Tripur,Tamil Nadu "),
               ),
@@ -149,7 +149,7 @@ class _MenswearState extends State<Menswear> {
                     Expanded(
                                           child: MenswearCard(
                img: ("assets/account/mens2.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
+                            text1:("Top Hiddle Cotton ... "),
                             text2:("Fashion Qubes "),
                             text3:("Tripur,Tamil Nadu"),
               ),
@@ -161,7 +161,7 @@ class _MenswearState extends State<Menswear> {
                   Expanded(
                                       child: MenswearCard(
                img: ("assets/account/mens3.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
+                            text1:("Top Hiddle Cotton ... "),
                             text2:("Fashion Qubes "),
                             text3:("Tripur,Tamil Nadu "),
               ),
@@ -169,7 +169,7 @@ class _MenswearState extends State<Menswear> {
                     Expanded(
                                           child: MenswearCard(
                img: ("assets/account/mens4.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
+                            text1:("Top Hiddle Cotton ... "),
                             text2:("Fashion Qubes "),
                             text3:("Tripur,Tamil Nadu"),
               ),
@@ -299,9 +299,7 @@ class MenswearCard extends StatelessWidget {
          Padding(
                          padding: const EdgeInsets.all(0.0),
                          child: Container(
-                          
                             decoration: BoxDecoration(
-                               color: Colors.white,
                             border: Border.all(color: Colors.grey[200])
                             ),
                            alignment: Alignment.center,

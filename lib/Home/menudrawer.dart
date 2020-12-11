@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:udaan/Account/Language.dart';
+import 'package:udaan/Alert/Support.dart';
+import 'package:udaan/Alert/Udaanpay.dart';
 
 class MenuDrawer extends StatelessWidget {
 navigateToPage(BuildContext context,String page){
@@ -363,14 +366,17 @@ StatefulBuilder(
               leading: Icon(Icons.rate_review_outlined,color: Colors.red),
               title: Text('Rate Card'),
               onTap: () {
-                Navigator.pop(context);
+              
               },
             ),
             ListTile(
               leading: Icon(Icons.wallet_travel_outlined,color: Colors.red),
               title: Text('UdaanPay',),
               onTap: () {
-                Navigator.pop(context);
+                 Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Udaanpay()));
               },
             ),
             
@@ -390,7 +396,10 @@ StatefulBuilder(
               leading: Icon(Icons.support_agent_outlined,color: Colors.red),
               title: Text('Support'),
               onTap: () {
-                Navigator.pop(context);
+                  Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Support()));
               },
             ),
             ListTile(
@@ -422,7 +431,10 @@ StatefulBuilder(
               leading: Icon(Icons.language_outlined,color: Colors.red),
               title: Text('Language/भाषा',),
               onTap: () {
-                Navigator.pop(context);
+                  Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Language()));
               },
             ),
              Container(
@@ -433,7 +445,7 @@ StatefulBuilder(
               leading: Icon(Icons.login_outlined,color: Colors.red),
               title: Text('Log out'),
               onTap: () {
-                Navigator.pop(context);
+              showLogout(context);
               },
             ),
              ListTile(
@@ -447,4 +459,37 @@ StatefulBuilder(
       
     );
   }
+  showLogout(BuildContext context) {
+
+  // set up the buttons
+  Widget cancelButton = FlatButton(
+    child: Text("No"),
+    onPressed:  () {
+       Navigator.of(context).pop(null);
+    },
+  );
+  Widget continueButton = FlatButton(
+    child: Text("YES"),
+    onPressed:  () {},
+  );
+
+  // set up the AlertDialog
+  AlertDialog alert = AlertDialog(
+    
+    content: Text(" Are you sure to log out of all devices currently logged in ? "),
+    actions: [
+      cancelButton,
+      continueButton,
+    ],
+  );
+
+  // show the dialog
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return alert;
+    },
+  );
+}
+
 }

@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:udaan/Alert/Order.dart';
+import 'package:udaan/Alert/Return.dart';
+import 'package:udaan/Alert/Support.dart';
+import 'package:udaan/Alert/Udaanpay.dart';
 import 'package:udaan/Home/Yourbiz/connections.dart';
 import 'package:udaan/Home/menudrawer.dart';
 import 'package:udaan/Home/orderforms.dart';
 import '../Account/Account.dart';
+
 
 class Yourbiz extends StatelessWidget {
   @override
@@ -46,7 +51,14 @@ class Yourbiz extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                    
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Order()));
+                   
+                      },
                       child: Container(
                         child: Column(children: <Widget>[
                           Padding(padding: EdgeInsets.fromLTRB(70, 0, 0, 0)),
@@ -71,7 +83,12 @@ class Yourbiz extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                         Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Udaanpay()));
+                      },
                       child: Container(
                         child: Column(children: <Widget>[
                           Padding(padding: EdgeInsets.fromLTRB(70, 0, 0, 0)),
@@ -120,7 +137,12 @@ class Yourbiz extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                         Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Return()));
+                      },
                       child: Container(
                         child: Column(children: <Widget>[
                           Padding(padding: EdgeInsets.fromLTRB(70, 0, 0, 0)),
@@ -149,7 +171,12 @@ class Yourbiz extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                         Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Support()));
+                      },
                       child: Container(
                         child: Column(children: <Widget>[
                           Padding(padding: EdgeInsets.fromLTRB(70, 0, 0, 0)),

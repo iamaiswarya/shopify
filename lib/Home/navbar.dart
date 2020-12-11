@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:udaan/Home/alerts.dart';
+import 'package:udaan/Alert/Alert.dart';
+
 import 'package:udaan/Home/yourbiz.dart';
 import 'package:udaan/Home/home.dart';
 
@@ -18,7 +19,7 @@ class _NavbarState extends State<Navbar> {
       child: Text('chat screen'),
     ),
     Center(
-      child: Alerts(),
+      child: Alert(),
     ),
     Center(
       child: Yourbiz(),

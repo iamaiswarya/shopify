@@ -3,13 +3,10 @@ import 'package:udaan/Home/UdaanHome/FashionQubes.dart';
 import 'package:udaan/Home/UdaanHome/Udaan.dart';
 import 'package:udaan/Home/orderforms.dart';
 
-class Menswear extends StatefulWidget {
-  
-  @override
-  _MenswearState createState() => _MenswearState();
-}
-
-class _MenswearState extends State<Menswear> {
+class ViewAllWomenShot extends StatelessWidget {
+   final String image1;
+   final String text1;
+  ViewAllWomenShot({Key key, @required this.image1, @required this.text1}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +31,7 @@ class _MenswearState extends State<Menswear> {
              RaisedButton.icon(onPressed: (){},
           color: Colors.white,
            icon: Expanded(child: Icon(Icons.search)), 
-           label: Expanded(child: Text('Menswear')), ),
+           label: Expanded(child: Text('Search',style: TextStyle(color: Colors.grey[400]),)), ),
           ],
                   
         ),
@@ -66,7 +63,7 @@ class _MenswearState extends State<Menswear> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text('32655 items found'),
+                  Text('1 items found  '),
                   // SizedBox(width:35),
                   GestureDetector(
                     onTap: (){
@@ -94,91 +91,31 @@ class _MenswearState extends State<Menswear> {
                 ],
               ),
           
-           Column(
-             children: [
-                 Row(
-               children:[
-                  Expanded(
-                                      child: MenswearCard(
-               img: ("assets/account/mens1.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
-                            text2:("Fashion Qubes "),
-                            text3:("Tripur,Tamil Nadu "),
-              ),
+           SingleChildScrollView(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+               children: [
+                  
+                 
+               SingleChildScrollView(
+                                child: Row(
+                   children:[
+                    MenswearCard(
+                   img: (image1),
+                                text1:(text1),
+                                text2:("Fashion Qubes "),
+                                text3:("Tripur,Tamil Nadu "),
                   ),
-                    Expanded(
-                                          child: MenswearCard(
-               img: ("assets/account/mens2.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
-                            text2:("Fashion Qubes "),
-                            text3:("Tripur,Tamil Nadu"),
-              ),
-                    ),
-               ],
-             ),
-               Row(
-               children:[
-                  Expanded(
-                                      child: MenswearCard(
-               img: ("assets/account/mens3.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
-                            text2:("Fashion Qubes "),
-                            text3:("Tripur,Tamil Nadu "),
-              ),
-                  ),
-                    Expanded(
-                                          child: MenswearCard(
-               img: ("assets/account/mens4.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
-                            text2:("Fashion Qubes "),
-                            text3:("Tripur,Tamil Nadu"),
-              ),
-                    ),
-               ],
-             ),
-             Row(
-               children:[
-                  Expanded(
-                                      child: MenswearCard(
-               img: ("assets/account/mens1.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
-                            text2:("Fashion Qubes "),
-                            text3:("Tripur,Tamil Nadu "),
-              ),
-                  ),
-                    Expanded(
-                                          child: MenswearCard(
-               img: ("assets/account/mens2.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
-                            text2:("Fashion Qubes "),
-                            text3:("Tripur,Tamil Nadu"),
-              ),
-                    ),
-               ],
-             ),
-               Row(
-               children:[
-                  Expanded(
-                                      child: MenswearCard(
-               img: ("assets/account/mens3.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
-                            text2:("Fashion Qubes "),
-                            text3:("Tripur,Tamil Nadu "),
-              ),
-                  ),
-                    Expanded(
-                                          child: MenswearCard(
-               img: ("assets/account/mens4.jpg"),
-                            text1:("Top Hiddle Cotton . . . ."),
-                            text2:("Fashion Qubes "),
-                            text3:("Tripur,Tamil Nadu"),
-              ),
-                    ),
-               ],
-             ),
+                     
+                       
+                   ],
+                 ),
+               ),
+               
 
 
-             ],
+               ],
+             ),
            ),
             ],
           ),
@@ -186,7 +123,7 @@ class _MenswearState extends State<Menswear> {
         ),
     );
   }
-    void _showModalSheet(context) {
+   void _showModalSheet(context) {
       showModalBottomSheet(
           context: context,
           builder: (builder) {
@@ -279,6 +216,9 @@ class _MenswearState extends State<Menswear> {
           });
     }
 }
+
+
+   
 class MenswearCard extends StatelessWidget {
   String img;
   String text1;
@@ -299,14 +239,12 @@ class MenswearCard extends StatelessWidget {
          Padding(
                          padding: const EdgeInsets.all(0.0),
                          child: Container(
-                          
                             decoration: BoxDecoration(
-                               color: Colors.white,
                             border: Border.all(color: Colors.grey[200])
                             ),
                            alignment: Alignment.center,
-                           height: MediaQuery.of(context).size.height * .60,
-                           width: MediaQuery.of(context).size.width * .30,
+                          //  height: MediaQuery.of(context).size.height * .54,
+                          //  width: MediaQuery.of(context).size.width * .30,
                           
                              child:Column(
                                
@@ -321,8 +259,8 @@ class MenswearCard extends StatelessWidget {
             height: MediaQuery.of(context).size.height * .30,
             width:MediaQuery.of(context).size.width * .38,),
                                    ), 
-            Center(child: Text(text1),),
-            GestureDetector(
+            Center(child: Text(text1)),
+             GestureDetector(
                        onTap: (){
              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => FashionQubes()));
          
@@ -339,7 +277,6 @@ class MenswearCard extends StatelessWidget {
                 ),
               ),
             ),
-           
             Center(child:SizedBox(
               width: MediaQuery.of(context).size.width * .42,
               // height: 70,

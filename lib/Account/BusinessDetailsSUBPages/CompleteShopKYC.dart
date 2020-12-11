@@ -2,6 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:udaan/Home/KYC/shop_kyc.dart';
+import 'package:udaan/Home/orderforms.dart';
 
 
 class CompleteShopKYC extends StatelessWidget  {
@@ -14,16 +16,34 @@ class CompleteShopKYC extends StatelessWidget  {
         appBar: AppBar(
           backgroundColor: Colors.redAccent,
           title: Text('Complete Shop KYC',
-          style: TextStyle(fontFamily: 'Chilanka'),),
+          // style: TextStyle(fontFamily: 'Chilanka'),
+          ),
           actions: [
              IconButton(
             icon: Icon(Icons.shopping_cart),
-            onPressed: (){},
+            onPressed: (){
+               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Orderforms()));
+            },
             )
           ],
           ),
          
-   
+      bottomNavigationBar: BottomAppBar(
+  
+       child: RaisedButton(
+                        color: Colors.blueAccent,
+                        onPressed:(){
+                            Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Shopkyc()));
+                        },
+                        child: Text(
+                          'Complete Shop KYC',
+                          style: TextStyle(color: Colors.white,
+                         
+                          fontWeight: FontWeight.bold),
+                        ),
+                        ),
+    
+    ),
   
   
         body: SingleChildScrollView(
