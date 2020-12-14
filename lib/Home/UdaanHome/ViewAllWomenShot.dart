@@ -4,61 +4,66 @@ import 'package:udaan/Home/UdaanHome/Udaan.dart';
 import 'package:udaan/Home/orderforms.dart';
 
 class ViewAllWomenShot extends StatelessWidget {
-   final String image1;
-   final String text1;
-  ViewAllWomenShot({Key key, @required this.image1, @required this.text1}) : super(key: key);
+  final String image1;
+  final String text1;
+  ViewAllWomenShot({Key key, @required this.image1, @required this.text1})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red[600],
-        title: 
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children:[
-            // Padding(
-            //   padding: const EdgeInsets.only(top:20.0,bottom: 20),
-            //   child: RaisedButton(
-            //     onPressed: (){},
-            //     color: Colors.white,
-            //     child: ListTile(
-            //       leading:Icon(Icons.search),
-            //       title: Text('Menswear  '),
-            //     ),
-            //   ),
-            // ),
-             RaisedButton.icon(onPressed: (){},
-          color: Colors.white,
-           icon: Expanded(child: Icon(Icons.search)), 
-           label: Expanded(child: Text('Search',style: TextStyle(color: Colors.grey[400]),)), ),
-          ],
-                  
+        title: Container(
+          decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border.all(color: Colors.white),
+              borderRadius: BorderRadius.all(Radius.circular(5))),
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height / 20,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 5),
+                child: Icon(
+                  Icons.search,
+                  color: Colors.grey[500],
+                ),
+              ),
+              Text('  Womenswear',
+                  style: TextStyle(
+                      color: Colors.grey[800],
+                      fontSize: 13,
+                      fontWeight: FontWeight.normal)),
+            ],
+          ),
         ),
-        
         actions: [
           Row(
             children: [
-           IconButton(
-            icon: Icon(Icons.share),
-            onPressed: (){
-              _showModalSheet(context);
-            },
-            ),
-           IconButton(
-            icon: Icon(Icons.shopping_cart),
-            onPressed: (){
-             Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Orderforms()));  
-            },
-            ),
+              IconButton(
+                icon: Icon(Icons.share),
+                onPressed: () {
+                  _showModalSheet(context);
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.shopping_cart),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => Orderforms()));
+                },
+              ),
             ],
           ),
         ],
-        ),
-        body: SingleChildScrollView(
-          child: ConstrainedBox(constraints: BoxConstraints(),
-          child:
-           Column(
+      ),
+      body: SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(),
+          child: Column(
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -66,159 +71,147 @@ class ViewAllWomenShot extends StatelessWidget {
                   Text('1 items found  '),
                   // SizedBox(width:35),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       _showModalSort(context);
                     },
-                                      child: Row(
+                    child: Row(
                       children: [
                         Icon(Icons.sort),
                         Text('Sort'),
                       ],
                     ),
                   ),
-                 
-               Container(height: 35, child: VerticalDivider(color: Colors.grey)),
-                      Row(
+
+                  Container(
+                      height: 35, child: VerticalDivider(color: Colors.grey)),
+                  Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(right:3.0),
+                        padding: const EdgeInsets.only(right: 3.0),
                         child: Icon(Icons.filter),
                       ),
                       Text('Filter'),
                     ],
                   ),
-               
                 ],
               ),
-          
-           SingleChildScrollView(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-               children: [
-                  
-                 
-               SingleChildScrollView(
-                                child: Row(
-                   children:[
-                    MenswearCard(
-                   img: (image1),
-                                text1:(text1),
-                                text2:("Fashion Qubes "),
-                                text3:("Tripur,Tamil Nadu "),
-                  ),
-                     
-                       
-                   ],
-                 ),
-               ),
-               
-
-
-               ],
-             ),
-           ),
-            ],
-          ),
-          ),
-        ),
-    );
-  }
-   void _showModalSheet(context) {
-      showModalBottomSheet(
-          context: context,
-          builder: (builder) {
-            return Container(
-              child: GestureDetector(
-                onTap: (){
-
-                },
-                child: Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: Text('Share Link with ......'),
-                ),
-                ),
-            );
-          });
-    }
-        void _showModalSort(context) {
-      showModalBottomSheet(
-          context: context,
-          builder: (builder) {
-            return Container(
-              child: GestureDetector(
-                onTap: (){
-
-                },
-                child: Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: SingleChildScrollView(
-                                      child: Container(
-                     height: 420,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+              SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SingleChildScrollView(
+                      child: Row(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text('✓ New & Popular'),
-                          ),
-                          Divider(
-                            color: Colors.grey,
-                          ),
-                           Padding(
-                             padding: const EdgeInsets.all(8.0),
-                             child: Text('Popularity'),
-                           ),
-                          Divider(
-                            color: Colors.grey,
-                          ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text('Latest'),
-                              ),
-                          Divider(
-                            color: Colors.grey,
-                          ),
-                               Padding(
-                                 padding: const EdgeInsets.all(8.0),
-                                 child: Text('₹ : Low to High'),
-                               ),
-                          Divider(
-                            color: Colors.grey,
-                          ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text('₹ : High to High'),
-                                  ),
-                          Divider(
-                            color: Colors.grey,
-                          ),
-                                     Padding(
-                                       padding: const EdgeInsets.all(8.0),
-                                       child: Text('MOQ: Low To High'),
-                                     ),
-                          Divider(
-                            color: Colors.grey,
-                          ),
-                                       Padding(
-                                         padding: const EdgeInsets.all(8.0),
-                                         child: Text('Margin Percent'),
-                                       ),
-                          Divider(
-                            color: Colors.grey,
+                          MenswearCard(
+                            img: (image1),
+                            text1: (text1),
+                            text2: ("Fashion Qubes "),
+                            text3: ("Tripur,Tamil Nadu "),
                           ),
                         ],
                       ),
                     ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _showModalSheet(context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (builder) {
+          return Container(
+            child: GestureDetector(
+              onTap: () {},
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Text('Share Link with ......'),
+              ),
+            ),
+          );
+        });
+  }
+
+  void _showModalSort(context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (builder) {
+          return Container(
+            child: GestureDetector(
+              onTap: () {},
+              child: Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: SingleChildScrollView(
+                  child: Container(
+                    height: 420,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('✓ New & Popular'),
+                        ),
+                        Divider(
+                          color: Colors.grey,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Popularity'),
+                        ),
+                        Divider(
+                          color: Colors.grey,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Latest'),
+                        ),
+                        Divider(
+                          color: Colors.grey,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('₹ : Low to High'),
+                        ),
+                        Divider(
+                          color: Colors.grey,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('₹ : High to High'),
+                        ),
+                        Divider(
+                          color: Colors.grey,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('MOQ: Low To High'),
+                        ),
+                        Divider(
+                          color: Colors.grey,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Margin Percent'),
+                        ),
+                        Divider(
+                          color: Colors.grey,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                ),
-            );
-          });
-    }
+              ),
+            ),
+          );
+        });
+  }
 }
 
-
-   
 class MenswearCard extends StatelessWidget {
   String img;
   String text1;
@@ -226,114 +219,118 @@ class MenswearCard extends StatelessWidget {
   String text3;
   MaterialColor color;
 
-  MenswearCard({Key key,this.img, this.text1, this.text2, this.text3, this.color}): super(key: key);
+  MenswearCard(
+      {Key key, this.img, this.text1, this.text2, this.text3, this.color})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-    child: ConstrainedBox(constraints: BoxConstraints(),
-    child: 
-   
-   
-         
-         Padding(
-                         padding: const EdgeInsets.all(0.0),
-                         child: Container(
-                            decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey[200])
-                            ),
-                           alignment: Alignment.center,
-                          //  height: MediaQuery.of(context).size.height * .54,
-                          //  width: MediaQuery.of(context).size.width * .30,
-                          
-                             child:Column(
-                               
-                               children: [
-                                   GestureDetector(
-                                     onTap: (){
-             Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => FashionQubes()));
-         
-                                     },
-                                                                      
-                                    child: Image.asset(img,
-            height: MediaQuery.of(context).size.height * .30,
-            width:MediaQuery.of(context).size.width * .38,),
-                                   ), 
-            Center(child: Text(text1)),
-             GestureDetector(
-                       onTap: (){
-             Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => FashionQubes()));
-         
-                                     },
-                          child: Container(
-                  width: MediaQuery.of(context).size.width * .42,
-                decoration: BoxDecoration(
-                   border: Border.all(color: Colors.grey[400]),
+      child: ConstrainedBox(
+        constraints: BoxConstraints(),
+        child: Padding(
+          padding: const EdgeInsets.all(0.0),
+          child: Container(
+            decoration:
+                BoxDecoration(border: Border.all(color: Colors.grey[200])),
+            alignment: Alignment.center,
+            //  height: MediaQuery.of(context).size.height * .54,
+            //  width: MediaQuery.of(context).size.width * .30,
+
+            child: Column(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => FashionQubes()));
+                  },
+                  child: Image.asset(
+                    img,
+                    height: MediaQuery.of(context).size.height * .30,
+                    width: MediaQuery.of(context).size.width * .38,
+                  ),
                 ),
-                alignment: Alignment.center,
-                child:  Padding(
-                  padding: const EdgeInsets.fromLTRB(0.0,8,0,8),
-                  child: Text("Deal of the day,disc",style: TextStyle(color: Colors.grey[600],fontSize: 11),),
-                ),
-              ),
-            ),
-            Center(child:SizedBox(
-              width: MediaQuery.of(context).size.width * .42,
-              // height: 70,
-              child: RaisedButton(
-                onPressed: (){
-         Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Udaan()));
-                },
-                color: Colors.grey[200],
-                child:Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(text2,
-                        style: TextStyle(color: Colors.grey[600]),),
-                        Expanded(
-                                                  child: Padding(
-                            padding: const EdgeInsets.only(left:5.0),
-                            child: Icon(Icons.chevron_right,
-                      color: Colors.grey[600]),
-                          ),
-                        ),
-                      ],
+                Center(child: Text(text1)),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => FashionQubes()));
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * .42,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey[400]),
                     ),
-                     Text(text3, style: TextStyle(color: Colors.grey[600]),),
-                  ],
+                    alignment: Alignment.center,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(0.0, 8, 0, 8),
+                      child: Text(
+                        "Deal of the day,disc",
+                        style: TextStyle(color: Colors.grey[600], fontSize: 11),
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-              
-            ),),
-            Padding(
-              padding: const EdgeInsets.only(left:10.0),
-              child: Align(
-                alignment: Alignment.topLeft,
-                            child: Image.asset('assets/account/FromTheBrand.jpg',
-                height: MediaQuery.of(context).size.height * .11,
-                width:MediaQuery.of(context).size.width * .18,),
-              ),
+                Center(
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width * .42,
+                    // height: 70,
+                    child: RaisedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Udaan()));
+                      },
+                      color: Colors.grey[200],
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                text2,
+                                style: TextStyle(color: Colors.grey[600]),
+                              ),
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 5.0),
+                                  child: Icon(Icons.chevron_right,
+                                      color: Colors.grey[600]),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            text3,
+                            style: TextStyle(color: Colors.grey[600]),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Image.asset(
+                      'assets/account/FromTheBrand.jpg',
+                      height: MediaQuery.of(context).size.height * .11,
+                      width: MediaQuery.of(context).size.width * .18,
+                    ),
+                  ),
+                ),
+              ],
             ),
-          
-                               ],
-                             ),
-     
-     
-      
-                         ),
-                       ),
-          
-    
-      
-  
-          
-        
-     
- 
-    ),
+          ),
+        ),
+      ),
     );
   }
 }
