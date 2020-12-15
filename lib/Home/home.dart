@@ -3,7 +3,8 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:udaan/Home/Clothing/kidswear.dart';
 import 'package:udaan/Home/KYC/shop_kyc.dart';
-import 'package:udaan/Home/UdaanHome/MensWearHome.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/MensWearHome.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/Search.dart';
 import 'package:udaan/Home/menudrawer.dart';
 import 'package:udaan/Home/orderforms.dart';
 
@@ -75,16 +76,21 @@ class Home extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(10))),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height / 18,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text('  Search',
-                  style: TextStyle(
-                      color: Colors.grey[800],
-                      fontSize: 13,
-                      fontWeight: FontWeight.normal)),
-              Icon(Icons.search)
-            ],
+          child: GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Searchpage()));   
+            },
+                      child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('  Search',
+                    style: TextStyle(
+                        color: Colors.grey[800],
+                        fontSize: 13,
+                        fontWeight: FontWeight.normal)),
+                Icon(Icons.search)
+              ],
+            ),
           ),
         ),
         backgroundColor: Colors.white,

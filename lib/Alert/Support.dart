@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:udaan/Home/orderforms.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-
-
+_makingPhoneCall() async { 
+  const url = 'tel:18001210985'; 
+  if (await canLaunch(url)) { 
+    await launch(url); 
+  } else { 
+    throw 'Could not launch $url'; 
+  } 
+}
 class Support extends StatelessWidget
 {
   @override
@@ -10,17 +18,16 @@ Widget build(BuildContext context)
   return Scaffold(
     appBar: AppBar(
       automaticallyImplyLeading: true,
-      leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.white,),
-        onPressed: null,
-        
-        ),
+  
 
       title: Text('Support',style: TextStyle(color: Colors.white)),
       backgroundColor: Colors.red,
       actions: <Widget>[
                IconButton(
                  icon: Icon(Icons.shopping_cart, color: Colors.white,), 
-                  onPressed: null,
+                  onPressed: (){
+               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Orderforms()));      
+                  },
                   
                   ),
              ],
@@ -46,8 +53,8 @@ Widget build(BuildContext context)
                           
                               child: Text(
                                 'HELP ON OTHER ISSUES',
-                                style: TextStyle(fontSize: 15,
-                                fontFamily: 'Chilanka',color: Colors.grey
+                                style: TextStyle(fontSize: 12,
+                                color: Colors.grey
 
                               ),
                               
@@ -56,51 +63,44 @@ Widget build(BuildContext context)
                            ),
                   ),
 
-  ListTile(
+                  GestureDetector(
+                    onTap: 
+                      _makingPhoneCall,
+                   
+                                      child: ListTile(
     
-                      // leading: Icon(Icons.group),
-                      title: Text('Information/Issues iwth udaan pay',style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                         fontFamily: 'Chilanka',
-                        color: Colors.grey[800],
-                      
-                      ),),
-                      
-                      
-                      // subtitle: Text('Manage people in your team',
-                      //   style: TextStyle(
-                      //     fontSize: 10,
-                      //      fontFamily: 'Chilanka',
-                      //     color: Colors.grey[800],
-                      //   ),),
-                      trailing: Icon(Icons.chevron_right),
-                  ),
-                  Divider(
-// height:50,
-// thickness:10,
-color:Colors.grey,
-indent:10,
-endIndent:10,
-),
-   ListTile(
-                      // leading: Icon(Icons.group),
-                      title: Text('Call for other issues',style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                         fontFamily: 'Chilanka',
-                        color: Colors.grey[800],
+                     
+                        title: Text('Information/Issues iwth udaan pay',style: TextStyle(
+                        fontSize: 12,
+                         
+                          color: Colors.grey[800],
                         
-
-                      ),),
-                      // subtitle: Text('Manage people in your team',
-                      //   style: TextStyle(
-                      //     fontSize: 10,
-                      //      fontFamily: 'Chilanka',
-                      //     color: Colors.grey[800],
-                      //   ),),
-                      trailing: Icon(Icons.chevron_right),
-                      
+                        ),),
+                        
+                        
+                
+                        trailing: Icon(Icons.chevron_right),
+                    ),
                   ),
-                  
+                  Divider( color:Colors.grey,),
+                  GestureDetector(
+                     onTap: 
+                      _makingPhoneCall,
+                                      child: ListTile(
+                       
+                        title: Text('Call for other issues',style: TextStyle(
+                          fontSize: 12,
+                           
+                          color: Colors.grey[800],
+                          
+
+                        ),),
+                 
+                        trailing: Icon(Icons.chevron_right),
+                        
+                    ),
+                  ),
+                        Divider( color:Colors.grey,),
 
 
 

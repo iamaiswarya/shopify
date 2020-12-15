@@ -41,6 +41,9 @@ dependencies:
   material_design_icons_flutter: ^4.0.5755
   tabbar: ^0.1.1
   vertical_tabs: ^0.2.0
+
+  url_launcher: ^5.7.10
+  carousel_slider: ^2.3.1
   
   
   
@@ -126,6 +129,8 @@ flutter:
     - assets/Alert/bell.jpg
     - assets/Alert/return.jpg
     - assets/Alert/udaanpay.jpg
+    - assets/Alert/udaanpay1.jpg
+    - assets/Alert/UdaanQR.jpg
 
     - assets/homecloth/
     - assets/homecloth/kids/

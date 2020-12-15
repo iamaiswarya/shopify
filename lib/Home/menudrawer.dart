@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:udaan/Account/Language.dart';
 import 'package:udaan/Alert/Support.dart';
 import 'package:udaan/Alert/Udaanpay.dart';
-
+import 'package:udaan/Home/UdaanPolicy.dart';
 class MenuDrawer extends StatelessWidget {
 navigateToPage(BuildContext context,String page){
   Navigator.of(context).pushNamedAndRemoveUntil(page, (Route<dynamic>route) => false);
@@ -413,7 +413,7 @@ StatefulBuilder(
               leading: Icon(Icons.featured_play_list_outlined,color: Colors.red),
               title: Text('Policies',),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => UdaanPolicy()));   
               },
             ),
              ListTile(

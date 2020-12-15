@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:udaan/Account/BusinessSettingsSUBPages/AddBankDetails.dart';
+import 'package:udaan/Home/orderforms.dart';
 
 class Register extends StatelessWidget
 {
@@ -16,7 +18,9 @@ Widget build(BuildContext context)
       actions: <Widget>[
                IconButton(
                  icon: Icon(Icons.shopping_cart,  color: Colors.white,), 
-                  onPressed: null,
+                  onPressed: (){
+               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Orderforms()));
+                  },
                  
                   ),
              ],
@@ -75,7 +79,9 @@ Widget build(BuildContext context)
         textColor: Colors.white,
         padding: EdgeInsets.all(8.0),
         splashColor: Colors.blueAccent,
-        onPressed: () {},
+        onPressed: () {
+           Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => AddBankDetails()));
+        },
         child: Text("Click to register Bank Account Details",style: TextStyle(fontSize: 14.0),),
         ),
           ),

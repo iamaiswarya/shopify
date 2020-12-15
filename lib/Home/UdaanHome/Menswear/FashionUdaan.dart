@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:udaan/Home/UdaanHome/FashionQubes.dart';
-import 'package:udaan/Home/UdaanHome/ViewAllWomenShot.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/FashionQubes.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/ViewAllWomenShot.dart';
 
-import 'package:udaan/Home/UdaanHome/ViewMensT-Shirt.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/ViewMensT-Shirt.dart';
 import 'package:udaan/Home/orderforms.dart';
 class FashionUdaan extends StatelessWidget {
   @override
@@ -298,12 +298,15 @@ class FashionUdaan extends StatelessWidget {
                     ),
                        Column(
              children: [
-                 Row(
+                    Row(
                children:[
-              MenswearCard(
-               img: ("assets/account/WomensShotPants.jpg"),
-                            text1:("Ladies Shorts-(Xl"),
-                          
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: MenswearCard(
+                 img: ("assets/account/WomensShotPants.jpg"),
+                              text1:("Ladies Shorts-(Xl"),
+                            
+                ),
               ),
                
                ],
@@ -329,11 +332,14 @@ class FashionUdaan extends StatelessWidget {
              children: [
                  Row(
                children:[
-                 MenswearCard(
+                 Padding(
+                   padding: const EdgeInsets.all(20.0),
+                   child: MenswearCard(
                img: ("assets/account/wonensT-shirts.jpg"),
-                            text1:("Top Hiddle Cotton "),
-                          
+                              text1:("Top Hiddle Cotton "),
+                            
               ),
+                 ),
             
              
                ],

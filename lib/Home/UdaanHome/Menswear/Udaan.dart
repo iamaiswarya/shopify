@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:udaan/Home/UdaanHome/FashionQubes.dart';
-import 'package:udaan/Home/UdaanHome/ImageUdaan.dart';
-import 'package:udaan/Home/UdaanHome/ViewAllWomenShot.dart';
-import 'package:udaan/Home/UdaanHome/ViewHistory.dart';
-import 'package:udaan/Home/UdaanHome/ViewMensT-Shirt.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/FashionQubes.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/ImageUdaan.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/ViewAllWomenShot.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/ViewHistory.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/ViewMensT-Shirt.dart';
 import 'package:udaan/Home/orderforms.dart';
+import 'package:share/share.dart';
+
 
 class Udaan extends StatefulWidget {
   @override
   _UdaanState createState() => _UdaanState();
 }
+String text =
+    'https://udaan.com/search/products?start=0&f=%2Bvertical%3AClothingTShirt&f=%2Bvertical%3AClothingTrackPant&f=%2Bvertical%3AClothingTrousers&f=%2Bvertical%3AClothingJeans&f=%2Bvertical%3AClothingShirt&f=%2Bvertical%3ABoxers&f=%2Bvertical%3AClothingShort&f=%2Bvertical%3ALungi&f=%2Bvertical%3AVest&f=%2Bvertical%3APayjama&f=%2Bstatus%3AACTIVE&sort=new_and_popular&title=Menswear&campaignSource=MLPV2&campaignId=CLT-NU-Upload-KYC-3-0&showOnlyLocal=false&hidePromoted=true&_showSingleSeller=false';
+String subject = 'MensWear';
 
 class _UdaanState extends State<Udaan> {
   @override
@@ -111,22 +116,26 @@ Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Vie
     );
   }
     void _showModalSheet(context) {
-      showModalBottomSheet(
-          context: context,
-          builder: (builder) {
-            return Container(
-              child: GestureDetector(
-                onTap: (){
-       
-                },
-                child: Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: Text('Share Link with ......'),
-                ),
-                ),
-            );
-          });
-    }
+    showModalBottomSheet(
+        context: context,
+        builder: (builder) {
+          return Container(
+            child: GestureDetector(
+              onTap: () {
+                final RenderBox box = context.findRenderObject();
+                Share.share(text,
+                    subject: subject,
+                    sharePositionOrigin:
+                        box.localToGlobal(Offset.zero) & box.size);
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Text('Share Link with ......'),
+              ),
+            ),
+          );
+        });
+  }
 }
 
 

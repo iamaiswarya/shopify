@@ -4,11 +4,11 @@ import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'dart:io';
 import 'dart:async';
-import 'package:udaan/Home/UdaanHome/Summary.dart';
-import 'package:udaan/Home/UdaanHome/Order.dart';
-import 'package:udaan/Home/UdaanHome/Return.dart';
-import 'package:udaan/Home/UdaanHome/OrderForm.dart';
-import 'package:udaan/Home/UdaanHome/sum.dart';
+
+import 'package:udaan/Home/UdaanHome/Menswear/ViewHistorySubPages/Order.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/ViewHistorySubPages/Return.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/ViewHistorySubPages/OrderForm.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/ViewHistorySubPages/sum.dart';
 class ViewHistory extends StatefulWidget {
   @override
   _ViewHistoryState createState() => _ViewHistoryState();

@@ -2,11 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:udaan/Account/BusinessDetailsSUBPages/CompleteShopKYC.dart';
-import 'package:udaan/Home/UdaanHome/Image.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/Image.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/UdaanReturnfaq.dart';
 
-import 'package:udaan/Home/UdaanHome/ViewMensT-Shirt.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/ViewMensT-Shirt.dart';
+
 import 'package:udaan/Home/orderforms.dart';
-import 'package:udaan/Home/UdaanHome/FashionUdaan.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/FashionUdaan.dart';
+import 'package:share/share.dart';
 // import 'CompleteShpoKYC.dart';
 class Constants{
   Constants._();
@@ -17,7 +20,9 @@ class FashionQubes extends StatefulWidget {
   @override
   _FashionQubesState createState() => _FashionQubesState();
 }
-
+String text =
+    'https://udaan.com/search/products?start=0&f=%2Bvertical%3AClothingTShirt&f=%2Bvertical%3AClothingTrackPant&f=%2Bvertical%3AClothingTrousers&f=%2Bvertical%3AClothingJeans&f=%2Bvertical%3AClothingShirt&f=%2Bvertical%3ABoxers&f=%2Bvertical%3AClothingShort&f=%2Bvertical%3ALungi&f=%2Bvertical%3AVest&f=%2Bvertical%3APayjama&f=%2Bstatus%3AACTIVE&sort=new_and_popular&title=Menswear&campaignSource=MLPV2&campaignId=CLT-NU-Upload-KYC-3-0&showOnlyLocal=false&hidePromoted=true&_showSingleSeller=false';
+String subject = 'MensWear';
 class _FashionQubesState extends State<FashionQubes> {
   createAlertDialog(BuildContext context){
       return showDialog(context: context,builder:(context){
@@ -438,17 +443,22 @@ class _FashionQubesState extends State<FashionQubes> {
                           Divider(
                             color:Colors.grey[400],
                           ),
-                          Row(
-                            children: [
-                              Padding(
-                                 padding: const EdgeInsets.only(left:15.0),
-                                child: Text("Fast and easy Return within 7 days of delivery",
-                                style: TextStyle(fontSize: 13),),
-                              ),
-                               Expanded(child: Align(
-                                 alignment: Alignment.topRight,
-                                 child: Icon(Icons.arrow_forward_ios_sharp,color: Colors.grey,size: 14,)))
-                            ],
+                          GestureDetector(
+                            onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => UdaanReturnfaq()));        
+                            },
+                                                      child: Row(
+                              children: [
+                                Padding(
+                                   padding: const EdgeInsets.only(left:15.0),
+                                  child: Text("Fast and easy Return within 7 days of delivery",
+                                  style: TextStyle(fontSize: 13),),
+                                ),
+                                 Expanded(child: Align(
+                                   alignment: Alignment.topRight,
+                                   child: Icon(Icons.arrow_forward_ios_sharp,color: Colors.grey,size: 14,)))
+                              ],
+                            ),
                           ),
                            Divider(
                             color:Colors.grey[400],
@@ -465,23 +475,27 @@ class _FashionQubesState extends State<FashionQubes> {
   
     );
   }
-      void _showModalSheet(context) {
-      showModalBottomSheet(
-          context: context,
-          builder: (builder) {
-            return Container(
-              child: GestureDetector(
-                onTap: (){
-       
-                },
-                child: Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: Text('Share Link with ......'),
-                ),
-                ),
-            );
-          });
-    }
+     void _showModalSheet(context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (builder) {
+          return Container(
+            child: GestureDetector(
+              onTap: () {
+                final RenderBox box = context.findRenderObject();
+                Share.share(text,
+                    subject: subject,
+                    sharePositionOrigin:
+                        box.localToGlobal(Offset.zero) & box.size);
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Text('Share Link with ......'),
+              ),
+            ),
+          );
+        });
+  }
   
 
    

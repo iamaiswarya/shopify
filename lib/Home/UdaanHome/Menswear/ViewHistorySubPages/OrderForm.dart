@@ -1,14 +1,66 @@
 import 'package:flutter/material.dart';
-class Summary extends StatefulWidget {
+
+import 'package:udaan/Home/UdaanHome/Menswear/ViewMensT-Shirt.dart';
+class OrderForms extends StatefulWidget {
   @override
-  _SummaryState createState() => _SummaryState();
+  _OrderFormsState createState() => _OrderFormsState();
 }
 
-class _SummaryState extends State<Summary> {
+class _OrderFormsState extends State<OrderForms> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
+       bottomNavigationBar: BottomAppBar(
+           child: Column(
+           mainAxisSize: MainAxisSize.min, 
+             children: [
+             Padding(
+               padding: const EdgeInsets.only(left:15.0),
+               child: Align(
+                 alignment: Alignment.topLeft,
+                              child: Text("Min order ammount is ₹2,500. Order for ₹2,500 for more",
+                 style: TextStyle(color: Colors.red,fontSize: 12),),
+               ),
+             ),
+             Padding(
+               padding: const EdgeInsets.all(15.0),
+               child: Row(
+               
+           
+                 children: [
+                   Column(
+
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                     children: [
+                       Text("₹ 0",style: TextStyle(color: Colors.red),),
+                       Text("₹0 + ₹ 0 GST",
+                       style: TextStyle(fontSize: 11),),
+                       Text("+Delivery Charges"),
+                     ],
+                   ),
+                  Expanded(
+                                      child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                           children: [
+                             RaisedButton(
+                        color: Colors.blue,
+                        child: Text("Select Delivery"),
+                        onPressed: (){
+                            
+                        },
+                    ),
+                           ],
+                       ),
+                  ),
+                   
+                 ],
+               ),
+             ),
+           
+           ],),
+    
+    ),
     body: SingleChildScrollView(
       child: Column(
                         
@@ -44,7 +96,7 @@ class _SummaryState extends State<Summary> {
                                   ],),
                                   trailing: GestureDetector(
                                     onTap: (){
-
+                                     Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ViewMensTShirts()));
                                     },
                                                                       child: Image(
                                       height: 30,

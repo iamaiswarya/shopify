@@ -5,9 +5,13 @@ class Alert extends StatefulWidget {
   
   _AlertState createState() => _AlertState();
 }
-
+  bool _hasBeenPressed = false;
+  bool _hasBeenPressed1 = false;
+  bool _hasBeenPressed2 = false;
+  bool _hasBeenPressed3 = false;
+  bool _hasBeenPressed4 = false;
 class _AlertState extends State<Alert> {
-  Color colorbt = Colors.yellow;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,15 +22,15 @@ class _AlertState extends State<Alert> {
                IconButton(
                  icon: Icon(
                    Icons.settings,color: Colors.white,), 
-                  onPressed: null,
+                  onPressed: (){
+
+                  },
                  
                   ),
              ],
              
     ),
-  //  drawer: Drawer(
-
-  //  ),
+  
  
 
    
@@ -39,104 +43,158 @@ SingleChildScrollView(
     Container(
       padding: EdgeInsets.fromLTRB(10, 40, 10, 0),
       child: SingleChildScrollView(
-              child: Row(
+        // scrollDirection: Axis.horizontal,
+              child: Container(
+                child: Row(
           mainAxisAlignment:MainAxisAlignment.spaceAround ,
           children: <Widget> [
-            GestureDetector(
-              onTap: (){
-            setState(() {
-                        colorbt = Colors.red;
-                      });
-              },
-    child: Container(
+         
+            
+     Container(
+      
         child:Column(children: <Widget> [
+          
             Padding(padding: EdgeInsets.fromLTRB(60, 0, 0, 0)),
-            Container(height: 70,width: 60,
-            decoration: BoxDecoration(shape: BoxShape.circle,
-            color: Colors.grey[200],
-            ),
-            child: Icon(
-              Icons.grid_view,color: Colors.white,size: 30,
-            ),
+            GestureDetector(
+                onTap: (){
+                    setState(() {
+                         _hasBeenPressed = !_hasBeenPressed;
+                        
+                        });
+                },
+                            child: Container(height: 70,width: 60,
+                
+                decoration: BoxDecoration(shape: BoxShape.circle,
+                color: _hasBeenPressed ? Colors.blue : Colors.grey[200],
+                ),
+                child: Icon(
+                  Icons.grid_view,color: Colors.white,size: 30,
+                ),
+                ),
             ),
             Text('All',style: TextStyle(fontSize:12,fontFamily:'chilanka'),),
         ],
         ) ,
         ),
-            ),
+            
 
-          GestureDetector(onTap: (){},
-    child: Container(
+      
+ Container(
         child:Column(children: <Widget> [
             Padding(padding: EdgeInsets.fromLTRB(60, 0, 0, 0)),
-            Container(height: 70,width: 60,
-            decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.grey[200],),
-            
-            child: Icon(
-              Icons.shopping_cart_outlined,
-              color: Colors.white,
-              size: 30,
+            GestureDetector(
+               onTap: (){
+                    setState(() {
+                          _hasBeenPressed1 = !_hasBeenPressed1;
+                        
+                        });
+                },
+                  
+                          child: Container(height: 70,width: 60,
+              decoration: BoxDecoration(shape: BoxShape.circle, 
+                color: _hasBeenPressed1 ? Colors.blue : Colors.grey[200],
+              ),
               
-            ),
+              child: Icon(
+                  Icons.shopping_cart_outlined,
+                  color: Colors.white,
+                  size: 30,
+                  
+              ),
+              ),
             ),
             Text('Orders',style: TextStyle(fontSize:12,fontFamily:'chilanka'),),
         ],
         ) ,
         ),
-            ),
+            
   
-          GestureDetector(onTap: (){},
-    child: Container(
+     
+    Container(
         child:Column(children: <Widget> [
             Padding(padding: EdgeInsets.fromLTRB(60, 0, 0, 0)),
-            Container(height: 70,width: 60,
-            decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.grey[200]),
-            child: Icon(
-              Icons.file_copy_sharp,color: Colors.white,size: 30,
-            ),
+            GestureDetector(
+               onTap: (){
+                    setState(() {
+                         _hasBeenPressed2 = !_hasBeenPressed2;
+                        
+                        });
+                },
+                  
+                          child: Container(height: 70,width: 60,
+              decoration: BoxDecoration(shape: BoxShape.circle,
+                color: _hasBeenPressed2 ? Colors.blue : Colors.grey[200],
+              ),
+              child: Icon(
+                  Icons.file_copy_sharp,color: Colors.white,size: 30,
+              ),
+              ),
             ),
             Text('Return',style: TextStyle(fontSize:12,fontFamily:'chilanka'),),
         ],
         ) ,
         ),
-            ),
+
   
-            GestureDetector(onTap: (){},
-    child: Container(
+       
+    Container(
         child:Column(children: <Widget> [
             Padding(padding: EdgeInsets.fromLTRB(60, 0, 0, 0)),
-            Container(height: 70,width: 60,
-            decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.grey[200]),
-            
-            child: Icon(
-              Icons.account_balance_rounded,color: Colors.white,size: 30,
-            ),
+            GestureDetector(
+               onTap: (){
+                    setState(() {
+                        _hasBeenPressed3 = !_hasBeenPressed3;
+                        
+                        });
+                },
+                  
+                          child: Container(height: 70,width: 60,
+              decoration: BoxDecoration(shape: BoxShape.circle, 
+                color: _hasBeenPressed3 ? Colors.blue : Colors.grey[200],
+              ),
+              
+              child: Icon(
+                  Icons.account_balance_rounded,color: Colors.white,size: 30,
+              ),
+              ),
             ),
             Text('Account',style: TextStyle(fontSize:12,fontFamily:'chilanka'),),
         ],
         ) ,
         ),
-            ),
+           
   
-           GestureDetector(onTap: (){},
-    child: Container(
+      
+  Container(
         child:Column(children: <Widget> [
-              Padding(padding: EdgeInsets.fromLTRB(60, 0, 0, 0)),
-              Container(height: 70,width: 60,
-              decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.grey[200]),
-              child: Icon(
-                Icons.money_sharp,color: Colors.white,size: 30,
-              ),
-              ),
-              Text('Offer',style: TextStyle(fontSize:12,fontFamily:'chilanka'),),
+                Padding(padding: EdgeInsets.fromLTRB(60, 0, 0, 0)),
+                GestureDetector(
+                   onTap: (){
+                    setState(() {
+                         _hasBeenPressed4 = !_hasBeenPressed4;
+                        
+                        });
+                },
+                  
+                                  child: Container(height: 70,width: 60,
+                  decoration: BoxDecoration(shape: BoxShape.circle, 
+                    color: _hasBeenPressed4 ? Colors.blue : Colors.grey[200],
+                  ),
+                  child: Icon(
+                    Icons.money_sharp,color: Colors.white,size: 30,
+                  ),
+                  ),
+                ),
+                Text('Offer',style: TextStyle(fontSize:12,fontFamily:'chilanka'),),
         ],
         ) ,
         ),
-              ),
+             
           
   
           ],
           ),
+              ),
       ),
         
     ),

@@ -1,25 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:udaan/Home/UdaanHome/FashionQubes.dart';
-import 'package:udaan/Home/UdaanHome/Udaan.dart';
-import 'package:udaan/Home/UdaanHome/filtertab.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/FashionQubes.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/Search.dart';
+import 'package:udaan/Home/UdaanHome/Menswear/Udaan.dart';
 import 'package:udaan/Home/orderforms.dart';
 import 'package:share/share.dart';
-
-class Menswear extends StatefulWidget {
-  @override
-  _MenswearState createState() => _MenswearState();
-}
-
 String text =
     'https://udaan.com/search/products?start=0&f=%2Bvertical%3AClothingTShirt&f=%2Bvertical%3AClothingTrackPant&f=%2Bvertical%3AClothingTrousers&f=%2Bvertical%3AClothingJeans&f=%2Bvertical%3AClothingShirt&f=%2Bvertical%3ABoxers&f=%2Bvertical%3AClothingShort&f=%2Bvertical%3ALungi&f=%2Bvertical%3AVest&f=%2Bvertical%3APayjama&f=%2Bstatus%3AACTIVE&sort=new_and_popular&title=Menswear&campaignSource=MLPV2&campaignId=CLT-NU-Upload-KYC-3-0&showOnlyLocal=false&hidePromoted=true&_showSingleSeller=false';
 String subject = 'MensWear';
-
-class _MenswearState extends State<Menswear> {
+class ViewAllWomenShot extends StatelessWidget {
+  final String image1;
+  final String text1;
+  ViewAllWomenShot({Key key, @required this.image1, @required this.text1})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red[800],
+        backgroundColor: Colors.red[600],
         title: Container(
           decoration: BoxDecoration(
               color: Colors.white,
@@ -27,22 +24,27 @@ class _MenswearState extends State<Menswear> {
               borderRadius: BorderRadius.all(Radius.circular(5))),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height / 20,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Padding(
-                padding: EdgeInsets.only(left: 5),
-                child: Icon(
-                  Icons.search,
-                  color: Colors.grey[500],
+          child: GestureDetector(
+            onTap:(){
+               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Searchpage()));
+            },
+                      child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 5),
+                  child: Icon(
+                    Icons.search,
+                    color: Colors.grey[500],
+                  ),
                 ),
-              ),
-              Text('  Menswear',
-                  style: TextStyle(
-                      color: Colors.grey[800],
-                      fontSize: 13,
-                      fontWeight: FontWeight.normal)),
-            ],
+                Text('  Womenswear',
+                    style: TextStyle(
+                        color: Colors.grey[800],
+                        fontSize: 13,
+                        fontWeight: FontWeight.normal)),
+              ],
+            ),
           ),
         ),
         actions: [
@@ -75,7 +77,7 @@ class _MenswearState extends State<Menswear> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text('32655 items found'),
+                  Text('1 items found  '),
                   // SizedBox(width:35),
                   GestureDetector(
                     onTap: () {
@@ -91,108 +93,35 @@ class _MenswearState extends State<Menswear> {
 
                   Container(
                       height: 35, child: VerticalDivider(color: Colors.grey)),
-                  GestureDetector(
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(right: 3.0),
-                          child: Icon(Icons.filter),
-                        ),
-                        Text('Filter'),
-                      ],
-                    ),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => FilterTab()));
-                    },
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 3.0),
+                        child: Icon(Icons.filter),
+                      ),
+                      Text('Filter'),
+                    ],
                   ),
                 ],
               ),
-              Column(
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: MenswearCard(
-                          img: ("assets/account/mens1.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
-                          text2: ("Fashion Qubes "),
-                          text3: ("Tripur,Tamil Nadu "),
-                        ),
+              SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SingleChildScrollView(
+                      child: Row(
+                        children: [
+                          MenswearCard(
+                            img: (image1),
+                            text1: (text1),
+                            text2: ("Fashion Qubes "),
+                            text3: ("Tripur,Tamil Nadu "),
+                          ),
+                        ],
                       ),
-                      Expanded(
-                        child: MenswearCard(
-                          img: ("assets/account/mens2.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
-                          text2: ("Fashion Qubes "),
-                          text3: ("Tripur,Tamil Nadu"),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: MenswearCard(
-                          img: ("assets/account/mens3.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
-                          text2: ("Fashion Qubes "),
-                          text3: ("Tripur,Tamil Nadu "),
-                        ),
-                      ),
-                      Expanded(
-                        child: MenswearCard(
-                          img: ("assets/account/mens4.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
-                          text2: ("Fashion Qubes "),
-                          text3: ("Tripur,Tamil Nadu"),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: MenswearCard(
-                          img: ("assets/account/mens1.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
-                          text2: ("Fashion Qubes "),
-                          text3: ("Tripur,Tamil Nadu "),
-                        ),
-                      ),
-                      Expanded(
-                        child: MenswearCard(
-                          img: ("assets/account/mens2.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
-                          text2: ("Fashion Qubes "),
-                          text3: ("Tripur,Tamil Nadu"),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: MenswearCard(
-                          img: ("assets/account/mens3.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
-                          text2: ("Fashion Qubes "),
-                          text3: ("Tripur,Tamil Nadu "),
-                        ),
-                      ),
-                      Expanded(
-                        child: MenswearCard(
-                          img: ("assets/account/mens4.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
-                          text2: ("Fashion Qubes "),
-                          text3: ("Tripur,Tamil Nadu"),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
@@ -201,7 +130,7 @@ class _MenswearState extends State<Menswear> {
     );
   }
 
-  void _showModalSheet(context) {
+   void _showModalSheet(context) {
     showModalBottomSheet(
         context: context,
         builder: (builder) {
@@ -317,12 +246,12 @@ class MenswearCard extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(0.0),
           child: Container(
-            decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(color: Colors.grey[200])),
+            decoration:
+                BoxDecoration(border: Border.all(color: Colors.grey[200])),
             alignment: Alignment.center,
-            height: MediaQuery.of(context).size.height * .60,
-            width: MediaQuery.of(context).size.width * .30,
+            //  height: MediaQuery.of(context).size.height * .54,
+            //  width: MediaQuery.of(context).size.width * .30,
+
             child: Column(
               children: [
                 GestureDetector(
@@ -338,9 +267,7 @@ class MenswearCard extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * .38,
                   ),
                 ),
-                Center(
-                  child: Text(text1),
-                ),
+                Center(child: Text(text1)),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
