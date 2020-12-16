@@ -4,9 +4,13 @@ import 'package:udaan/Home/UdaanHome/Menswear/Search.dart';
 import 'package:udaan/Home/UdaanHome/Menswear/Udaan.dart';
 import 'package:udaan/Home/orderforms.dart';
 import 'package:share/share.dart';
+
+import 'filtertab.dart';
+
 String text =
     'https://udaan.com/search/products?start=0&f=%2Bvertical%3AClothingTShirt&f=%2Bvertical%3AClothingTrackPant&f=%2Bvertical%3AClothingTrousers&f=%2Bvertical%3AClothingJeans&f=%2Bvertical%3AClothingShirt&f=%2Bvertical%3ABoxers&f=%2Bvertical%3AClothingShort&f=%2Bvertical%3ALungi&f=%2Bvertical%3AVest&f=%2Bvertical%3APayjama&f=%2Bstatus%3AACTIVE&sort=new_and_popular&title=Menswear&campaignSource=MLPV2&campaignId=CLT-NU-Upload-KYC-3-0&showOnlyLocal=false&hidePromoted=true&_showSingleSeller=false';
 String subject = 'MensWear';
+
 class ViewAllWomenShot extends StatelessWidget {
   final String image1;
   final String text1;
@@ -25,10 +29,13 @@ class ViewAllWomenShot extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height / 20,
           child: GestureDetector(
-            onTap:(){
-               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Searchpage()));
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => Searchpage()));
             },
-                      child: Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
@@ -93,15 +100,23 @@ class ViewAllWomenShot extends StatelessWidget {
 
                   Container(
                       height: 35, child: VerticalDivider(color: Colors.grey)),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(right: 3.0),
-                        child: Icon(Icons.filter),
+                  GestureDetector(
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 3.0),
+                            child: Icon(Icons.filter),
+                          ),
+                          Text('Filter'),
+                        ],
                       ),
-                      Text('Filter'),
-                    ],
-                  ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    FilterTab()));
+                      }),
                 ],
               ),
               SingleChildScrollView(
@@ -130,7 +145,7 @@ class ViewAllWomenShot extends StatelessWidget {
     );
   }
 
-   void _showModalSheet(context) {
+  void _showModalSheet(context) {
     showModalBottomSheet(
         context: context,
         builder: (builder) {

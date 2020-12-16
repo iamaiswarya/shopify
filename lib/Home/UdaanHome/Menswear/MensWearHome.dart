@@ -29,10 +29,13 @@ class _MenswearState extends State<Menswear> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height / 20,
           child: GestureDetector(
-            onTap: (){
-             Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Searchpage()));  
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => Searchpage()));
             },
-                      child: Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
