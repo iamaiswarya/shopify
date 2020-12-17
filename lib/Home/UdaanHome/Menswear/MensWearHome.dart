@@ -105,7 +105,10 @@ class _MenswearState extends State<Menswear> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 3.0),
-                          child: Icon(Icons.filter),
+                          child: Icon(
+                            Icons.filter_alt,
+                            color: Colors.grey[700],
+                          ),
                         ),
                         Text('Filter'),
                       ],

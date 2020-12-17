@@ -132,9 +132,13 @@ class KidsWear extends StatelessWidget {
                     ),
                     title: Text(
                       'Infants (0-2 Years)',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.black),
                     ),
-                    subtitle: Text('Kids Top Bottom Sets...'),
+                    subtitle: Text(
+                      'Kids Top Bottom Sets...',
+                      style: TextStyle(color: Colors.black),
+                    ),
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -144,7 +148,7 @@ class KidsWear extends StatelessWidget {
                             'Kids Top \nBottom Set',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
+                            'assets/homecloth/kids/kidsfrock.jpg',
                             'Kids Frock',
                           )
                         ],
@@ -153,11 +157,11 @@ class KidsWear extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Infant Gift Set',
+                            'assets/homecloth/kids/infantgiftset.jpg',
+                            'Infant Gift\n  Set',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
+                            'assets/homecloth/kids/kidsweater.jpg',
                             'Kids Sweater',
                           )
                         ],
@@ -166,11 +170,11 @@ class KidsWear extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids Romper',
+                            'assets/homecloth/kids/babyfrock.jpg',
+                            'Baby Frock',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
+                            'assets/homecloth/kids/babytopbottom.jpg',
                             'Baby Top \nBottom Set',
                           )
                         ],
@@ -179,25 +183,12 @@ class KidsWear extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
+                            'assets/homecloth/kids/babybooties.jpg',
                             'Baby Booties',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Baby Mittens',
-                          )
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Baby Shirt',
-                          ),
-                          sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Baby TShirt',
+                            'assets/homecloth/kids/babytshirt.jpg',
+                            'Baby Tshirt',
                           )
                         ],
                       ),
@@ -208,8 +199,12 @@ class KidsWear extends StatelessWidget {
                       image: AssetImage('assets/homecloth/kids/boys.jpg'),
                     ),
                     title: Text('Boys',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: Text('Kids Top Set,Kids Jeans...'),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.black)),
+                    subtitle: Text(
+                      'Kids Top Set,Kids Jeans...',
+                      style: TextStyle(color: Colors.black),
+                    ),
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -219,7 +214,7 @@ class KidsWear extends StatelessWidget {
                             'Kids Tops\nBottom Set',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
+                            'assets/homecloth/kids/kidsjeans.jpg',
                             'Kids Jeans',
                           )
                         ],
@@ -228,11 +223,11 @@ class KidsWear extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
+                            'assets/homecloth/kids/kidsshirt.jpg',
                             'Kids Shirt',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
+                            'assets/homecloth/kids/kidstshirt.jpg',
                             'Kids T-Shirt',
                           )
                         ],
@@ -241,25 +236,12 @@ class KidsWear extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Boys Ethnic\nSet',
+                            'assets/homecloth/kids/kidsweater.jpg',
+                            'Kids Sweater',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids Short',
-                          )
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids Tra',
-                          ),
-                          sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Baby Top \nBottom Set',
+                            'assets/homecloth/kids/kidsjacket.jpg',
+                            'Kids Jacket',
                           )
                         ],
                       ),
@@ -270,8 +252,12 @@ class KidsWear extends StatelessWidget {
                       image: AssetImage('assets/homecloth/kids/girls.jpg'),
                     ),
                     title: Text('Girls',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: Text('Kids Top Set,Kids Frocks...'),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.black)),
+                    subtitle: Text(
+                      'Kids Top Set,Kids Frocks...',
+                      style: TextStyle(color: Colors.black),
+                    ),
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -281,8 +267,8 @@ class KidsWear extends StatelessWidget {
                             'Kids Tops\nBottom Set',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids Jeans',
+                            'assets/homecloth/kids/kidsfrock.jpg',
+                            'Kids Frock',
                           )
                         ],
                       ),
@@ -290,12 +276,25 @@ class KidsWear extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids Shirt',
+                            'assets/homecloth/kids/kidsjeans.jpg',
+                            'Kids Jeans',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids T-Shirt',
+                            'assets/homecloth/kids/girlsethnic.jpg',
+                            'Girls Ethnic\n  Sets',
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          sub(
+                            'assets/homecloth/kids/kidsweater.jpg',
+                            'Kids Sweater',
+                          ),
+                          sub(
+                            'assets/homecloth/kids/kidsjacket.jpg',
+                            'Kids Jacket',
                           )
                         ],
                       ),
@@ -306,19 +305,23 @@ class KidsWear extends StatelessWidget {
                       image: AssetImage('assets/homecloth/kids/kidaccess.jpg'),
                     ),
                     title: Text('Kids Accessories',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: Text('Kids Cap,Kids Blanket...'),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.black)),
+                    subtitle: Text(
+                      'Kids Cap,Kids Blanket...',
+                      style: TextStyle(color: Colors.black),
+                    ),
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids Tops\nBottom Set',
+                            'assets/homecloth/kids/kidscap.jpg',
+                            'Kids Cap',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids Jeans',
+                            'assets/homecloth/kids/kidsblanket.jpg',
+                            'Kids Blanket',
                           )
                         ],
                       ),
@@ -326,12 +329,12 @@ class KidsWear extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids Shirt',
+                            'assets/homecloth/kids/kidsglove.jpg',
+                            'Kids Glove',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids T-Shirt',
+                            'assets/homecloth/kids/kidsraincoat.jpg',
+                            'Kids\nRaincoat',
                           )
                         ],
                       ),
@@ -342,19 +345,23 @@ class KidsWear extends StatelessWidget {
                       image: AssetImage('assets/homecloth/kids/kidsinner.jpg'),
                     ),
                     title: Text('Kids Innerwear',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: Text('Kids Sock,Kids Thermal...'),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.black)),
+                    subtitle: Text(
+                      'Kids Sock,Kids Thermal...',
+                      style: TextStyle(color: Colors.black),
+                    ),
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids Tops\nBottom Set',
+                            'assets/homecloth/kids/kidsocks.jpg',
+                            'Kids Socks',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids Jeans',
+                            'assets/homecloth/kids/kidsthermal.jpg',
+                            'Kids\nThermal',
                           )
                         ],
                       ),
@@ -362,12 +369,12 @@ class KidsWear extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids Shirt',
+                            'assets/homecloth/kids/kidsbloomer.jpg',
+                            'Kids\nBloomer',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids T-Shirt',
+                            'assets/homecloth/kids/kidsvest.jpg',
+                            'Kids Vest',
                           )
                         ],
                       ),
@@ -375,23 +382,26 @@ class KidsWear extends StatelessWidget {
                   ),
                   ExpansionTile(
                     leading: Image(
-                      image:
-                          AssetImage('assets/homecloth/kids/kidsuniform.jpg'),
+                      image: AssetImage('assets/homecloth/kids/kidsnight.jpg'),
                     ),
-                    title: Text('Kids School Uniform',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: Text('Kids Nightwear,Kids...'),
+                    title: Text('Kids Nightwear',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.black)),
+                    subtitle: Text(
+                      'Kids Nightwear,Kids...',
+                      style: TextStyle(color: Colors.black),
+                    ),
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids Tops\nBottom Set',
+                            'assets/homecloth/kids/kidsnightwear.jpg',
+                            'Kids\nNightwear',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids Jeans',
+                            'assets/homecloth/kids/kidscamisole.jpg',
+                            'Kids\nCamisole',
                           )
                         ],
                       ),
@@ -399,12 +409,12 @@ class KidsWear extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids Shirt',
+                            'assets/homecloth/kids/kidsboxers.jpg',
+                            'Kids Boxers',
                           ),
                           sub(
-                            'assets/homecloth/kids/kidstop.jpg',
-                            'Kids T-Shirt',
+                            'assets/homecloth/kids/kidstope.jpg',
+                            '',
                           )
                         ],
                       ),
@@ -412,9 +422,10 @@ class KidsWear extends StatelessWidget {
                   ),
                   ListTile(
                     leading: Image(
-                      image: AssetImage('assets/homecloth/kids/kidsnight.jpg'),
+                      image:
+                          AssetImage('assets/homecloth/kids/kidsuniform.jpg'),
                     ),
-                    title: Text('Kids Nightwear',
+                    title: Text('Kids School Uniform',
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     trailing: Icon(Icons.chevron_right),
                   ),
