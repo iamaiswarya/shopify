@@ -135,6 +135,7 @@ class _ViewHistoryState extends State<ViewHistory> {
                   color: Colors.white,
                   child: new TabBar(indicatorColor: Colors.blue,
                   labelColor: Colors.black,
+                          isScrollable: true,
                     tabs: [
                       new Tab(text: 'Summary'),
                       GestureDetector(

@@ -7,6 +7,7 @@ import 'package:udaan/Home/UdaanHome/Menswear/MensWearHome.dart';
 import 'package:udaan/Home/UdaanHome/Menswear/Search.dart';
 import 'package:udaan/Home/menudrawer.dart';
 import 'package:udaan/Home/orderforms.dart';
+import 'package:udaan/Home/Clothing/FashionAccessories/FashionAcessoriesHome.dart';
 
 class Home extends StatelessWidget {
   Container MyImage(
@@ -212,10 +213,18 @@ class Home extends StatelessWidget {
                   height: MediaQuery.of(context).size.height / 5.6,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Image(
-                      image:
-                          AssetImage('assets/homecloth/fashionaccessories.jpg'),
-                      fit: BoxFit.fill,
+                    child: GestureDetector(
+                          onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => FashionAcessoriesHome()));
+                      },
+                                          child: Image(
+                        image:
+                            AssetImage('assets/homecloth/fashionaccessories.jpg'),
+                        fit: BoxFit.fill,
+                      ),
                     ),
                   ),
                 ),

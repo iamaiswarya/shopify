@@ -122,8 +122,37 @@ flutter:
     - assets/account/F1.png
     - assets/account/IndianFlag.png
     - assets/account/TomHiddle.jpg
+
+    - assets/FashionAccessories/Cap.jpg
+    - assets/FashionAccessories/Cap1.jpg
+    - assets/FashionAccessories/Watch.jpg
+    - assets/FashionAccessories/Belts.jpg
+    - assets/FashionAccessories/HairAccessories.jpg
+    - assets/FashionAccessories/BagsWallets.jpg
+    - assets/FashionAccessories/FashionJewellery.jpg
+    - assets/FashionAccessories/HairBand.jpg
+    - assets/FashionAccessories/MenBroach.jpg
+    - assets/FashionAccessories/MenJewellery.jpg
+    - assets/FashionAccessories/Sunglass.jpg
+    - assets/FashionAccessories/WistBands.jpg
+    - assets/FashionAccessories/WomenBracelet.jpg
+    - assets/FashionAccessories/Watch1.png
+    - assets/FashionAccessories/MensEarring.jpg
+    - assets/FashionAccessories/MenBracelet.jpg
+    - assets/FashionAccessories/MensRing.jpg
+    - assets/FashionAccessories/HairClip.jpg
+    - assets/FashionAccessories/HairJewellery.jpg
+    - assets/FashionAccessories/HairExtension.jpg
+    - assets/FashionAccessories/Backpack.jpg
+    - assets/FashionAccessories/Schoolbag.jpg
+    - assets/FashionAccessories/HandBag.jpg
+    - assets/FashionAccessories/Wallet.jpg
+    - assets/FashionAccessories/WomensEarring.jpg
+    - assets/FashionAccessories/Necklace.jpg
+    - assets/FashionAccessories/WomenBracelet.jpg
     
     - assets/kyc/
+    - assets/kids/
 
     - assets/Alert/bank.png
     - assets/Alert/bell.jpg

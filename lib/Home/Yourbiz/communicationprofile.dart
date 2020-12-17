@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:udaan/Account/UserAccountSUBPages/EmailAccount.dart';
 
 
 class Communicationprofile extends StatefulWidget {
@@ -143,7 +144,9 @@ class _CommunicationprofileState extends State<Communicationprofile> {
        ListTile(
          title: Text('Athul',style: (TextStyle(fontSize: 15)),),
          subtitle: Text('Not set',style: (TextStyle(color: Colors.grey,fontSize: 13))),
-         trailing: FlatButton(onPressed: (){}, child: Text('EDIT',style: TextStyle(color: Colors.blue),)),
+         trailing: FlatButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => EmailAccount())); 
+         }, child: Text('EDIT',style: TextStyle(color: Colors.blue),)),
        ),
 
                   ]  
