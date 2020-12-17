@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:udaan/Home/Yourbiz/communicationprofile.dart';
 
 class Alert extends StatefulWidget {
   @override
   
   _AlertState createState() => _AlertState();
 }
+
+
   bool _hasBeenPressed = false;
   bool _hasBeenPressed1 = false;
   bool _hasBeenPressed2 = false;
@@ -23,6 +26,7 @@ class _AlertState extends State<Alert> {
                  icon: Icon(
                    Icons.settings,color: Colors.white,), 
                   onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Communicationprofile()));     
 
                   },
                  
@@ -59,6 +63,10 @@ SingleChildScrollView(
                 onTap: (){
                     setState(() {
                          _hasBeenPressed = !_hasBeenPressed;
+                         _hasBeenPressed1= false;
+                         _hasBeenPressed2= false;
+                         _hasBeenPressed3= false;
+                         _hasBeenPressed4= false;
                         
                         });
                 },
@@ -86,6 +94,10 @@ SingleChildScrollView(
                onTap: (){
                     setState(() {
                           _hasBeenPressed1 = !_hasBeenPressed1;
+                          _hasBeenPressed= false;
+                          _hasBeenPressed2= false;
+                          _hasBeenPressed3= false;
+                          _hasBeenPressed4= false;
                         
                         });
                 },
@@ -117,6 +129,10 @@ SingleChildScrollView(
                onTap: (){
                     setState(() {
                          _hasBeenPressed2 = !_hasBeenPressed2;
+                         _hasBeenPressed= false;
+                         _hasBeenPressed1= false;
+                         _hasBeenPressed3= false;
+                         _hasBeenPressed4= false;
                         
                         });
                 },
@@ -144,6 +160,10 @@ SingleChildScrollView(
                onTap: (){
                     setState(() {
                         _hasBeenPressed3 = !_hasBeenPressed3;
+                        _hasBeenPressed= false;
+                        _hasBeenPressed1= false;
+                        _hasBeenPressed2= false;
+                        _hasBeenPressed4= false;
                         
                         });
                 },
@@ -172,6 +192,10 @@ SingleChildScrollView(
                    onTap: (){
                     setState(() {
                          _hasBeenPressed4 = !_hasBeenPressed4;
+                         _hasBeenPressed= false;
+                         _hasBeenPressed1= false;
+                         _hasBeenPressed2= false;
+                         _hasBeenPressed3= false;
                         
                         });
                 },

@@ -103,6 +103,10 @@ body:SingleChildScrollView(
     //   ),
     // ),
   // ImageSlider(),
+    Container(
+    height: 15,
+    color: Colors.grey[200],
+  ),
       ListTile(
                         leading: Icon(Icons.qr_code),
                         title: Text('Register with udaanpay',style: TextStyle(

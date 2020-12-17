@@ -190,31 +190,41 @@ new ListTile(
             
             title: new Text('All Returns'),
            
-            onTap: () => {}          
+            onTap: () => {
+              Navigator.of(context).pop(null),
+            }          
           ),
           new ListTile(
            
             title: new Text('Pending'),
             
-            onTap: () => {}        
+            onTap: () => {
+              Navigator.of(context).pop(null),
+            }        
           ),
            new ListTile(
            
             title: new Text('Approved'),
            
-            onTap: () => {}        
+            onTap: () => {
+              Navigator.of(context).pop(null),
+            }        
           ),
            new ListTile(
             
             title: new Text('Rejected'),
            
-            onTap: () => {}        
+            onTap: () => {
+              Navigator.of(context).pop(null),
+            }        
           ),
            new ListTile(
             
             title: new Text('Cancelled'),
             
-            onTap: () => {}        
+            onTap: () => {
+              Navigator.of(context).pop(null),
+            }        
           ),
             ],
           ),

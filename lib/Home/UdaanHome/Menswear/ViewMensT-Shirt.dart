@@ -333,7 +333,7 @@ class MenswearCard extends StatelessWidget {
             decoration:
                 BoxDecoration(border: Border.all(color: Colors.grey[200])),
             alignment: Alignment.center,
-            height: MediaQuery.of(context).size.height * .60,
+            // height: MediaQuery.of(context).size.height * .60,
             width: MediaQuery.of(context).size.width * .30,
             child: Column(
               children: [

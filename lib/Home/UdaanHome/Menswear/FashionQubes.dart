@@ -100,9 +100,9 @@ class _FashionQubesState extends State<FashionQubes> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
-              radius: 18,
-              backgroundImage:AssetImage("assets/account/F1.jpg",) ,
+            Image(
+              
+              image:AssetImage("assets/account/F1.png",) ,
             ),
             SizedBox(width: 5,),
             Text(

@@ -28,7 +28,9 @@ class OrderState extends State<Order> {
         backgroundColor: Colors.red,
         actions:<Widget> [
           IconButton(icon:Icon(Icons.shopping_cart_outlined,color: Colors.white,), 
-          onPressed: null,
+          onPressed: (){
+            Navigator.of(context).pop(null);
+          },
           
           ),
         ],

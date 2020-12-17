@@ -250,51 +250,86 @@ class _MenswearState extends State<Menswear> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('✓ New & Popular'),
+                        GestureDetector(
+                          onTap: (){
+                               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Menswear()));
+                          },
+                                                  child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('✓ New & Popular'),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('Popularity'),
+                        GestureDetector(
+                           onTap: (){
+                               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Menswear()));
+                          },
+                                                  child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('Popularity'),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('Latest'),
+                        GestureDetector(
+                             onTap: (){
+                               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Menswear()));
+                          },
+                                                  child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('Latest'),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('₹ : Low to High'),
+                        GestureDetector(
+                                           onTap: (){
+                               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Menswear()));
+                          },
+                                                  child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('₹ : Low to High'),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('₹ : High to High'),
+                        GestureDetector(
+                                                onTap: (){
+                               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Menswear()));
+                          },
+                                                  child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('₹ : High to High'),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('MOQ: Low To High'),
+                        GestureDetector(
+                                                            onTap: (){
+                               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Menswear()));
+                          },
+                                                  child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('MOQ: Low To High'),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('Margin Percent'),
+                        GestureDetector(
+                                                                onTap: (){
+                               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Menswear()));
+                          },
+                                                  child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('Margin Percent'),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
@@ -333,7 +368,7 @@ class MenswearCard extends StatelessWidget {
                 color: Colors.white,
                 border: Border.all(color: Colors.grey[200])),
             alignment: Alignment.center,
-            height: MediaQuery.of(context).size.height * .60,
+            // height: MediaQuery.of(context).size.height * .60,
             width: MediaQuery.of(context).size.width * .30,
             child: Column(
               children: [
