@@ -6,7 +6,33 @@ import 'package:udaan/Home/UdaanHome/Menswear/filtertab.dart';
 import 'package:udaan/Home/orderforms.dart';
 import 'package:share/share.dart';
 
-class InfantGiftSub extends StatelessWidget {
+class Common extends StatefulWidget {
+  final String heading, items, image1, image2, image3, image4, image5, image6;
+  final String texta, textb, textc, textd, texte, textf;
+  Common(
+      {this.heading,
+      this.items,
+      this.image1,
+      this.image2,
+      this.image3,
+      this.image4,
+      this.image5,
+      this.image6,
+      this.texta,
+      this.textb,
+      this.textc,
+      this.textd,
+      this.texte,
+      this.textf});
+  @override
+  _CommonState createState() => _CommonState();
+}
+
+String text =
+    'https://udaan.com/search/products?start=0&f=%2Bvertical%3AClothingTShirt&f=%2Bvertical%3AClothingTrackPant&f=%2Bvertical%3AClothingTrousers&f=%2Bvertical%3AClothingJeans&f=%2Bvertical%3AClothingShirt&f=%2Bvertical%3ABoxers&f=%2Bvertical%3AClothingShort&f=%2Bvertical%3ALungi&f=%2Bvertical%3AVest&f=%2Bvertical%3APayjama&f=%2Bstatus%3AACTIVE&sort=new_and_popular&title=Menswear&campaignSource=MLPV2&campaignId=CLT-NU-Upload-KYC-3-0&showOnlyLocal=false&hidePromoted=true&_showSingleSeller=false';
+String subject = 'MensWear';
+
+class _CommonState extends State<Common> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +62,7 @@ class InfantGiftSub extends StatelessWidget {
                     color: Colors.grey[500],
                   ),
                 ),
-                Text('  Infant Gift',
+                Text(widget.heading,
                     style: TextStyle(
                         color: Colors.grey[800],
                         fontSize: 13,
@@ -75,7 +101,7 @@ class InfantGiftSub extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text('32655 items found'),
+                  Text(widget.items),
                   // SizedBox(width:35),
                   GestureDetector(
                     onTap: () {
@@ -96,7 +122,10 @@ class InfantGiftSub extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 3.0),
-                          child: Icon(Icons.filter),
+                          child: Icon(
+                            Icons.filter_alt,
+                            color: Colors.grey[700],
+                          ),
                         ),
                         Text('Filter'),
                       ],
@@ -116,16 +145,16 @@ class InfantGiftSub extends StatelessWidget {
                     children: [
                       Expanded(
                         child: MenswearCard(
-                          img: ("assets/kids/i1.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
+                          img: (widget.image1),
+                          text1: (widget.texta),
                           text2: ("Fashion Qubes "),
                           text3: ("Tripur,Tamil Nadu "),
                         ),
                       ),
                       Expanded(
                         child: MenswearCard(
-                          img: ("assets/kids/i2.gif"),
-                          text1: ("Top Hiddle Cotton . . . ."),
+                          img: (widget.image2),
+                          text1: (widget.textb),
                           text2: ("Fashion Qubes "),
                           text3: ("Tripur,Tamil Nadu"),
                         ),
@@ -136,16 +165,16 @@ class InfantGiftSub extends StatelessWidget {
                     children: [
                       Expanded(
                         child: MenswearCard(
-                          img: ("assets/kids/i3.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
+                          img: (widget.image3),
+                          text1: (widget.textc),
                           text2: ("Fashion Qubes "),
                           text3: ("Tripur,Tamil Nadu "),
                         ),
                       ),
                       Expanded(
                         child: MenswearCard(
-                          img: ("assets/kids/i4.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
+                          img: (widget.image4),
+                          text1: (widget.textd),
                           text2: ("Fashion Qubes "),
                           text3: ("Tripur,Tamil Nadu"),
                         ),
@@ -156,42 +185,42 @@ class InfantGiftSub extends StatelessWidget {
                     children: [
                       Expanded(
                         child: MenswearCard(
-                          img: ("assets/kids/5.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
+                          img: (widget.image5),
+                          text1: (widget.texte),
                           text2: ("Fashion Qubes "),
                           text3: ("Tripur,Tamil Nadu "),
                         ),
                       ),
                       Expanded(
                         child: MenswearCard(
-                          img: ("assets/kids/6.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
+                          img: (widget.image6),
+                          text1: (widget.textf),
                           text2: ("Fashion Qubes "),
                           text3: ("Tripur,Tamil Nadu"),
                         ),
                       ),
                     ],
                   ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: MenswearCard(
-                          img: ("assets/kids/7.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
-                          text2: ("Fashion Qubes "),
-                          text3: ("Tripur,Tamil Nadu "),
-                        ),
-                      ),
-                      Expanded(
-                        child: MenswearCard(
-                          img: ("assets/kids/8.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
-                          text2: ("Fashion Qubes "),
-                          text3: ("Tripur,Tamil Nadu"),
-                        ),
-                      ),
-                    ],
-                  ),
+                  // Row(
+                  //   children: [
+                  //     Expanded(
+                  //       child: MenswearCard(
+                  //         img: ("assets/account/mens3.jpg"),
+                  //         text1: ("Top Hiddle Cotton . . . ."),
+                  //         text2: ("Fashion Qubes "),
+                  //         text3: ("Tripur,Tamil Nadu "),
+                  //       ),
+                  //     ),
+                  //     Expanded(
+                  //       child: MenswearCard(
+                  //         img: ("assets/account/mens4.jpg"),
+                  //         text1: ("Top Hiddle Cotton . . . ."),
+                  //         text2: ("Fashion Qubes "),
+                  //         text3: ("Tripur,Tamil Nadu"),
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
                 ],
               ),
             ],
@@ -207,7 +236,13 @@ class InfantGiftSub extends StatelessWidget {
         builder: (builder) {
           return Container(
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                final RenderBox box = context.findRenderObject();
+                Share.share(text,
+                    subject: subject,
+                    sharePositionOrigin:
+                        box.localToGlobal(Offset.zero) & box.size);
+              },
               child: Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Text('Share Link with ......'),
@@ -232,51 +267,86 @@ class InfantGiftSub extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('✓ New & Popular'),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('✓ New & Popular'),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('Popularity'),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('Popularity'),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('Latest'),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('Latest'),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('₹ : Low to High'),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('₹ : Low to High'),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('₹ : High to High'),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('₹ : High to High'),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('MOQ: Low To High'),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('MOQ: Low To High'),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('Margin Percent'),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('Margin Percent'),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
@@ -315,7 +385,7 @@ class MenswearCard extends StatelessWidget {
                 color: Colors.white,
                 border: Border.all(color: Colors.grey[200])),
             alignment: Alignment.center,
-            height: MediaQuery.of(context).size.height * .60,
+            // height: MediaQuery.of(context).size.height * .60,
             width: MediaQuery.of(context).size.width * .30,
             child: Column(
               children: [

@@ -10,10 +10,7 @@ class Orderforms extends StatelessWidget {
           leading: IconButton(
               icon: Icon(Icons.arrow_back, color: Colors.white),
               onPressed: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => Navbar()));
+                Navigator.pop(context);
               }),
           backgroundColor: Colors.red,
           elevation: 0,

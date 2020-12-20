@@ -6,7 +6,30 @@ import 'package:udaan/Home/UdaanHome/Menswear/filtertab.dart';
 import 'package:udaan/Home/orderforms.dart';
 import 'package:share/share.dart';
 
-class InfantGiftSub extends StatelessWidget {
+class Subpage extends StatefulWidget {
+  final String heading, items, image1, image2, image3, image4;
+  final String texta, textb, textc, textd;
+  Subpage(
+      {this.heading,
+      this.items,
+      this.image1,
+      this.image2,
+      this.image3,
+      this.image4,
+      this.texta,
+      this.textb,
+      this.textc,
+      this.textd});
+
+  @override
+  _SubpageState createState() => _SubpageState();
+}
+
+String text =
+    'https://udaan.com/search/products?start=0&f=%2Bvertical%3AClothingTShirt&f=%2Bvertical%3AClothingTrackPant&f=%2Bvertical%3AClothingTrousers&f=%2Bvertical%3AClothingJeans&f=%2Bvertical%3AClothingShirt&f=%2Bvertical%3ABoxers&f=%2Bvertical%3AClothingShort&f=%2Bvertical%3ALungi&f=%2Bvertical%3AVest&f=%2Bvertical%3APayjama&f=%2Bstatus%3AACTIVE&sort=new_and_popular&title=Menswear&campaignSource=MLPV2&campaignId=CLT-NU-Upload-KYC-3-0&showOnlyLocal=false&hidePromoted=true&_showSingleSeller=false';
+String subject = 'KidsTopBottomSub';
+
+class _SubpageState extends State<Subpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +59,7 @@ class InfantGiftSub extends StatelessWidget {
                     color: Colors.grey[500],
                   ),
                 ),
-                Text('  Infant Gift',
+                Text(widget.heading,
                     style: TextStyle(
                         color: Colors.grey[800],
                         fontSize: 13,
@@ -75,7 +98,7 @@ class InfantGiftSub extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text('32655 items found'),
+                  Text(widget.items),
                   // SizedBox(width:35),
                   GestureDetector(
                     onTap: () {
@@ -116,16 +139,16 @@ class InfantGiftSub extends StatelessWidget {
                     children: [
                       Expanded(
                         child: MenswearCard(
-                          img: ("assets/kids/i1.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
+                          img: (widget.image1),
+                          text1: (widget.texta),
                           text2: ("Fashion Qubes "),
                           text3: ("Tripur,Tamil Nadu "),
                         ),
                       ),
                       Expanded(
                         child: MenswearCard(
-                          img: ("assets/kids/i2.gif"),
-                          text1: ("Top Hiddle Cotton . . . ."),
+                          img: (widget.image2),
+                          text1: (widget.textb),
                           text2: ("Fashion Qubes "),
                           text3: ("Tripur,Tamil Nadu"),
                         ),
@@ -136,62 +159,62 @@ class InfantGiftSub extends StatelessWidget {
                     children: [
                       Expanded(
                         child: MenswearCard(
-                          img: ("assets/kids/i3.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
+                          img: (widget.image3),
+                          text1: (widget.textc),
                           text2: ("Fashion Qubes "),
                           text3: ("Tripur,Tamil Nadu "),
                         ),
                       ),
                       Expanded(
                         child: MenswearCard(
-                          img: ("assets/kids/i4.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
+                          img: (widget.image4),
+                          text1: (widget.textd),
                           text2: ("Fashion Qubes "),
                           text3: ("Tripur,Tamil Nadu"),
                         ),
                       ),
                     ],
                   ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: MenswearCard(
-                          img: ("assets/kids/5.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
-                          text2: ("Fashion Qubes "),
-                          text3: ("Tripur,Tamil Nadu "),
-                        ),
-                      ),
-                      Expanded(
-                        child: MenswearCard(
-                          img: ("assets/kids/6.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
-                          text2: ("Fashion Qubes "),
-                          text3: ("Tripur,Tamil Nadu"),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: MenswearCard(
-                          img: ("assets/kids/7.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
-                          text2: ("Fashion Qubes "),
-                          text3: ("Tripur,Tamil Nadu "),
-                        ),
-                      ),
-                      Expanded(
-                        child: MenswearCard(
-                          img: ("assets/kids/8.jpg"),
-                          text1: ("Top Hiddle Cotton . . . ."),
-                          text2: ("Fashion Qubes "),
-                          text3: ("Tripur,Tamil Nadu"),
-                        ),
-                      ),
-                    ],
-                  ),
+                  // Row(
+                  //   children: [
+                  //     Expanded(
+                  //       child: MenswearCard(
+                  //         img: ("assets/kids/5.jpg"),
+                  //         text1: ("Top Hiddle Cotton . . . ."),
+                  //         text2: ("Fashion Qubes "),
+                  //         text3: ("Tripur,Tamil Nadu "),
+                  //       ),
+                  //     ),
+                  //     Expanded(
+                  //       child: MenswearCard(
+                  //         img: ("assets/kids/6.jpg"),
+                  //         text1: ("Top Hiddle Cotton . . . ."),
+                  //         text2: ("Fashion Qubes "),
+                  //         text3: ("Tripur,Tamil Nadu"),
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // Row(
+                  //   children: [
+                  //     Expanded(
+                  //       child: MenswearCard(
+                  //         img: ("assets/kids/7.jpg"),
+                  //         text1: ("Top Hiddle Cotton . . . ."),
+                  //         text2: ("Fashion Qubes "),
+                  //         text3: ("Tripur,Tamil Nadu "),
+                  //       ),
+                  //     ),
+                  //     Expanded(
+                  //       child: MenswearCard(
+                  //         img: ("assets/kids/8.jpg"),
+                  //         text1: ("Top Hiddle Cotton . . . ."),
+                  //         text2: ("Fashion Qubes "),
+                  //         text3: ("Tripur,Tamil Nadu"),
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
                 ],
               ),
             ],
@@ -207,7 +230,13 @@ class InfantGiftSub extends StatelessWidget {
         builder: (builder) {
           return Container(
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                final RenderBox box = context.findRenderObject();
+                Share.share(text,
+                    subject: subject,
+                    sharePositionOrigin:
+                        box.localToGlobal(Offset.zero) & box.size);
+              },
               child: Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Text('Share Link with ......'),

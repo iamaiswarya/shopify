@@ -163,6 +163,9 @@ flutter:
 
     - assets/homecloth/
     - assets/homecloth/kids/
+    - assets/homecloth/kids/kidssub/
+    - assets/homecloth/fabric/
+    - assets/homecloth/women/
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

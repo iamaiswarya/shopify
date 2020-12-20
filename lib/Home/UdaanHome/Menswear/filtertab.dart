@@ -60,82 +60,104 @@ class _FilterTabState extends State<FilterTab> {
         ),
       ),
       body: Container(
-          color: Colors.red,
-          child: VerticalTabs(
-            disabledChangePageFromContentView: true,
-            contentScrollAxis: Axis.vertical,
-            indicatorColor: Colors.red,
-            backgroundColor: Colors.white,
-            tabsWidth: MediaQuery.of(context).size.width / 4,
-            indicatorWidth: 5,
-            selectedTabBackgroundColor: Colors.white,
-            tabBackgroundColor: Colors.grey[300],
-            tabs: <Tab>[
-              Tab(
-                  child: Container(
-                      height: 40, child: Center(child: Text('Price - ₹')))),
-              Tab(
-                  child:
-                      Container(height: 40, child: Center(child: Text('MOQ')))),
-              Tab(
-                  child: Container(
-                      height: 40, child: Center(child: Text('Fabric')))),
-              Tab(
-                  child: Container(
-                      height: 40, child: Center(child: Text('Clothing')))),
-              Tab(
-                  child: Container(
-                      height: 40, child: Center(child: Text('Size')))),
-              Tab(
-                  child: Container(
-                      height: 40, child: Center(child: Text('Ideal For')))),
-              Tab(
-                  child: Container(
-                      height: 40, child: Center(child: Text('Color')))),
-              Tab(
-                  child: Container(
-                      height: 40, child: Center(child: Text('Sleeve')))),
-              Tab(
-                  child: Container(
-                      height: 40, child: Center(child: Text('Stretch')))),
-              Tab(
-                  child:
-                      Container(height: 40, child: Center(child: Text('Fit')))),
-              Tab(
-                  child: Container(
-                      height: 40, child: Center(child: Text('Rise')))),
-              Tab(
-                  child: Container(
-                      height: 40, child: Center(child: Text('Neck')))),
-              Tab(
-                  child: Container(
-                      height: 40, child: Center(child: Text('Packaging')))),
-              Tab(
-                  child: Container(
-                      height: 40, child: Center(child: Text('Wash Type')))),
-              Tab(
-                  child: Container(
-                      height: 40, child: Center(child: Text('Pattern')))),
-              Tab(
-                  child: Container(
-                      height: 40, child: Center(child: Text('Pocket')))),
-            ],
-            contents: <Widget>[
-              Container(
-                child: Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            children: [
-                              Text('Min Price - ₹'),
-                              SizedBox(
-                                height: 10,
+        color: Colors.red,
+        child: VerticalTabs(
+          disabledChangePageFromContentView: true,
+          contentScrollAxis: Axis.vertical,
+          indicatorColor: Colors.red,
+          backgroundColor: Colors.white,
+          tabsWidth: MediaQuery.of(context).size.width / 4,
+          indicatorWidth: 5,
+          selectedTabBackgroundColor: Colors.white,
+          tabBackgroundColor: Colors.grey[300],
+          tabs: <Tab>[
+            Tab(
+                child: Container(
+                    height: 40, child: Center(child: Text('Price - ₹')))),
+            Tab(
+                child:
+                    Container(height: 40, child: Center(child: Text('MOQ')))),
+            Tab(
+                child: Container(
+                    height: 40, child: Center(child: Text('Fabric')))),
+            Tab(
+                child: Container(
+                    height: 40, child: Center(child: Text('Clothing')))),
+            Tab(
+                child:
+                    Container(height: 40, child: Center(child: Text('Size')))),
+            Tab(
+                child: Container(
+                    height: 40, child: Center(child: Text('Ideal For')))),
+            Tab(
+                child:
+                    Container(height: 40, child: Center(child: Text('Color')))),
+            Tab(
+                child: Container(
+                    height: 40, child: Center(child: Text('Sleeve')))),
+            Tab(
+                child: Container(
+                    height: 40, child: Center(child: Text('Stretch')))),
+            Tab(
+                child:
+                    Container(height: 40, child: Center(child: Text('Fit')))),
+            Tab(
+                child:
+                    Container(height: 40, child: Center(child: Text('Rise')))),
+            Tab(
+                child:
+                    Container(height: 40, child: Center(child: Text('Neck')))),
+            Tab(
+                child: Container(
+                    height: 40, child: Center(child: Text('Packaging')))),
+            Tab(
+                child: Container(
+                    height: 40, child: Center(child: Text('Wash Type')))),
+            Tab(
+                child: Container(
+                    height: 40, child: Center(child: Text('Pattern')))),
+            Tab(
+                child: Container(
+                    height: 40, child: Center(child: Text('Pocket')))),
+          ],
+          contents: <Widget>[
+            Container(
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          children: [
+                            Text('Min Price - ₹'),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5.0)),
                               ),
-                              Container(
+                              child: Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: Text(
+                                  _lowValue.toString(),
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text('Max Price - ₹'),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
                                 decoration: BoxDecoration(
                                   border: Border.all(color: Colors.grey),
                                   borderRadius:
@@ -144,68 +166,68 @@ class _FilterTabState extends State<FilterTab> {
                                 child: Padding(
                                   padding: const EdgeInsets.all(5.0),
                                   child: Text(
-                                    _lowValue.toString(),
+                                    _highValue.toString(),
                                     style: TextStyle(fontSize: 20),
                                   ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Text('Max Price - ₹'),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                  decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.grey),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5.0)),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(5.0),
-                                    child: Text(
-                                      _highValue.toString(),
-                                      style: TextStyle(fontSize: 20),
-                                    ),
-                                  )),
-                            ],
-                          ),
-                        ],
-                      ),
-                      RangeSlider(
-                          activeColor: Colors.teal,
-                          inactiveColor: Colors.grey,
-                          min: 0.0,
-                          max: 1000.0,
-                          divisions: 10,
-                          values: RangeValues(_lowValue, _highValue),
-                          onChanged: (_range) {
-                            setState(() {
-                              _lowValue = _range.start;
-                              _highValue = _range.end;
-                            });
-                          })
-                    ],
-                  ),
+                                )),
+                          ],
+                        ),
+                      ],
+                    ),
+                    RangeSlider(
+                        activeColor: Colors.teal,
+                        inactiveColor: Colors.grey,
+                        min: 0.0,
+                        max: 1000.0,
+                        divisions: 10,
+                        values: RangeValues(_lowValue, _highValue),
+                        onChanged: (_range) {
+                          setState(() {
+                            _lowValue = _range.start;
+                            _highValue = _range.end;
+                          });
+                        })
+                  ],
                 ),
               ),
-              Container(
-                child: Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            children: [
-                              Text('Min MOQ'),
-                              SizedBox(
-                                height: 10,
+            ),
+            Container(
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          children: [
+                            Text('Min MOQ'),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5.0)),
                               ),
-                              Container(
+                              child: Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: Text(
+                                  _lowValue.toString(),
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text('Max MOQ'),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
                                 decoration: BoxDecoration(
                                   border: Border.all(color: Colors.grey),
                                   borderRadius:
@@ -214,363 +236,366 @@ class _FilterTabState extends State<FilterTab> {
                                 child: Padding(
                                   padding: const EdgeInsets.all(5.0),
                                   child: Text(
-                                    _lowValue.toString(),
+                                    _highValue.toString(),
                                     style: TextStyle(fontSize: 20),
                                   ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Text('Max MOQ'),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                  decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.grey),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5.0)),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(5.0),
-                                    child: Text(
-                                      _highValue.toString(),
-                                      style: TextStyle(fontSize: 20),
-                                    ),
-                                  )),
-                            ],
-                          ),
-                        ],
-                      ),
-                      RangeSlider(
-                          activeColor: Colors.teal,
-                          inactiveColor: Colors.grey,
-                          min: 0.0,
-                          max: 1000.0,
-                          divisions: 10,
-                          values: RangeValues(_lowValue, _highValue),
-                          onChanged: (_range) {
-                            setState(() {
-                              _lowValue = _range.start;
-                              _highValue = _range.end;
-                            });
-                          })
-                    ],
-                  ),
+                                )),
+                          ],
+                        ),
+                      ],
+                    ),
+                    RangeSlider(
+                        activeColor: Colors.teal,
+                        inactiveColor: Colors.grey,
+                        min: 0.0,
+                        max: 1000.0,
+                        divisions: 10,
+                        values: RangeValues(_lowValue, _highValue),
+                        onChanged: (_range) {
+                          setState(() {
+                            _lowValue = _range.start;
+                            _highValue = _range.end;
+                          });
+                        })
+                  ],
                 ),
               ),
-              Container(
-                child: ListView.builder(
-                    itemCount: Fabric.length,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        child: CheckboxListTile(
-                          title: Text(
-                            Fabric[index]['name'],
-                            style: TextStyle(fontSize: 13),
-                          ),
-                          value: Fabric[index]['select'],
-                          secondary: Text(Fabric[index]['data']),
-                          controlAffinity: ListTileControlAffinity.leading,
-                          onChanged: (bool value) {
-                            setState(() {
-                              Fabric[index]['select'] = value;
-                            });
-                          },
+            ),
+            Container(
+              child: ListView.builder(
+                  itemCount: Fabric.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: CheckboxListTile(
+                        title: Text(
+                          Fabric[index]['name'],
+                          style: TextStyle(fontSize: 13),
                         ),
-                      );
-                    }),
-              ),
-              Container(
-                child: ListView.builder(
-                    itemCount: Clothing.length,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        child: CheckboxListTile(
-                          title: Text(
-                            Clothing[index]['name'],
-                            style: TextStyle(fontSize: 13),
-                          ),
-                          value: Clothing[index]['select'],
-                          secondary: Text(Clothing[index]['data']),
-                          controlAffinity: ListTileControlAffinity.leading,
-                          onChanged: (bool value) {
-                            setState(() {
-                              Clothing[index]['select'] = value;
-                            });
-                          },
+                        value: Fabric[index]['select'],
+                        secondary: Text(Fabric[index]['data']),
+                        controlAffinity: ListTileControlAffinity.leading,
+                        onChanged: (bool value) {
+                          setState(() {
+                            Fabric[index]['select'] = value;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+            Container(
+              child: ListView.builder(
+                  itemCount: Clothing.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: CheckboxListTile(
+                        title: Text(
+                          Clothing[index]['name'],
+                          style: TextStyle(fontSize: 13),
                         ),
-                      );
-                    }),
-              ),
-              Container(
-                child: ListView.builder(
-                    itemCount: Fabric.length,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        child: CheckboxListTile(
-                          title: Text(
-                            Fabric[index]['name'],
-                            style: TextStyle(fontSize: 13),
-                          ),
-                          value: Fabric[index]['select'],
-                          secondary: Text(Fabric[index]['data']),
-                          controlAffinity: ListTileControlAffinity.leading,
-                          onChanged: (bool value) {
-                            setState(() {
-                              Fabric[index]['select'] = value;
-                            });
-                          },
+                        value: Clothing[index]['select'],
+                        secondary: Text(Clothing[index]['data']),
+                        controlAffinity: ListTileControlAffinity.leading,
+                        onChanged: (bool value) {
+                          setState(() {
+                            Clothing[index]['select'] = value;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+            Container(
+              child: ListView.builder(
+                  itemCount: Fabric.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: CheckboxListTile(
+                        title: Text(
+                          Fabric[index]['name'],
+                          style: TextStyle(fontSize: 13),
                         ),
-                      );
-                    }),
-              ),
-              Container(
-                child: ListView.builder(
-                    itemCount: Clothing.length,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        child: CheckboxListTile(
-                          title: Text(
-                            Clothing[index]['name'],
-                            style: TextStyle(fontSize: 13),
-                          ),
-                          value: Clothing[index]['select'],
-                          secondary: Text(Clothing[index]['data']),
-                          controlAffinity: ListTileControlAffinity.leading,
-                          onChanged: (bool value) {
-                            setState(() {
-                              Clothing[index]['select'] = value;
-                            });
-                          },
+                        value: Fabric[index]['select'],
+                        secondary: Text(Fabric[index]['data']),
+                        controlAffinity: ListTileControlAffinity.leading,
+                        onChanged: (bool value) {
+                          setState(() {
+                            Fabric[index]['select'] = value;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+            Container(
+              child: ListView.builder(
+                  itemCount: Clothing.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: CheckboxListTile(
+                        title: Text(
+                          Clothing[index]['name'],
+                          style: TextStyle(fontSize: 13),
                         ),
-                      );
-                    }),
-              ),
-              Container(
-                child: ListView.builder(
-                    itemCount: Fabric.length,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        child: CheckboxListTile(
-                          title: Text(
-                            Fabric[index]['name'],
-                            style: TextStyle(fontSize: 13),
-                          ),
-                          value: Fabric[index]['select'],
-                          secondary: Text(Fabric[index]['data']),
-                          controlAffinity: ListTileControlAffinity.leading,
-                          onChanged: (bool value) {
-                            setState(() {
-                              Fabric[index]['select'] = value;
-                            });
-                          },
+                        value: Clothing[index]['select'],
+                        secondary: Text(Clothing[index]['data']),
+                        controlAffinity: ListTileControlAffinity.leading,
+                        onChanged: (bool value) {
+                          setState(() {
+                            Clothing[index]['select'] = value;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+            Container(
+              child: ListView.builder(
+                  itemCount: Fabric.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: CheckboxListTile(
+                        title: Text(
+                          Fabric[index]['name'],
+                          style: TextStyle(fontSize: 13),
                         ),
-                      );
-                    }),
-              ),
-              Container(
-                child: ListView.builder(
-                    itemCount: Clothing.length,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        child: CheckboxListTile(
-                          title: Text(
-                            Clothing[index]['name'],
-                            style: TextStyle(fontSize: 13),
-                          ),
-                          value: Clothing[index]['select'],
-                          secondary: Text(Clothing[index]['data']),
-                          controlAffinity: ListTileControlAffinity.leading,
-                          onChanged: (bool value) {
-                            setState(() {
-                              Clothing[index]['select'] = value;
-                            });
-                          },
+                        value: Fabric[index]['select'],
+                        secondary: Text(Fabric[index]['data']),
+                        controlAffinity: ListTileControlAffinity.leading,
+                        onChanged: (bool value) {
+                          setState(() {
+                            Fabric[index]['select'] = value;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+            Container(
+              child: ListView.builder(
+                  itemCount: Clothing.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: CheckboxListTile(
+                        title: Text(
+                          Clothing[index]['name'],
+                          style: TextStyle(fontSize: 13),
                         ),
-                      );
-                    }),
-              ),
-              Container(
-                child: ListView.builder(
-                    itemCount: Fabric.length,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        child: CheckboxListTile(
-                          title: Text(
-                            Fabric[index]['name'],
-                            style: TextStyle(fontSize: 13),
-                          ),
-                          value: Fabric[index]['select'],
-                          secondary: Text(Fabric[index]['data']),
-                          controlAffinity: ListTileControlAffinity.leading,
-                          onChanged: (bool value) {
-                            setState(() {
-                              Fabric[index]['select'] = value;
-                            });
-                          },
+                        value: Clothing[index]['select'],
+                        secondary: Text(Clothing[index]['data']),
+                        controlAffinity: ListTileControlAffinity.leading,
+                        onChanged: (bool value) {
+                          setState(() {
+                            Clothing[index]['select'] = value;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+            Container(
+              child: ListView.builder(
+                  itemCount: Fabric.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: CheckboxListTile(
+                        title: Text(
+                          Fabric[index]['name'],
+                          style: TextStyle(fontSize: 13),
                         ),
-                      );
-                    }),
-              ),
-              Container(
-                child: ListView.builder(
-                    itemCount: Clothing.length,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        child: CheckboxListTile(
-                          title: Text(
-                            Clothing[index]['name'],
-                            style: TextStyle(fontSize: 13),
-                          ),
-                          value: Clothing[index]['select'],
-                          secondary: Text(Clothing[index]['data']),
-                          controlAffinity: ListTileControlAffinity.leading,
-                          onChanged: (bool value) {
-                            setState(() {
-                              Clothing[index]['select'] = value;
-                            });
-                          },
+                        value: Fabric[index]['select'],
+                        secondary: Text(Fabric[index]['data']),
+                        controlAffinity: ListTileControlAffinity.leading,
+                        onChanged: (bool value) {
+                          setState(() {
+                            Fabric[index]['select'] = value;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+            Container(
+              child: ListView.builder(
+                  itemCount: Clothing.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: CheckboxListTile(
+                        title: Text(
+                          Clothing[index]['name'],
+                          style: TextStyle(fontSize: 13),
                         ),
-                      );
-                    }),
-              ),
-              Container(
-                child: ListView.builder(
-                    itemCount: Fabric.length,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        child: CheckboxListTile(
-                          title: Text(
-                            Fabric[index]['name'],
-                            style: TextStyle(fontSize: 13),
-                          ),
-                          value: Fabric[index]['select'],
-                          secondary: Text(Fabric[index]['data']),
-                          controlAffinity: ListTileControlAffinity.leading,
-                          onChanged: (bool value) {
-                            setState(() {
-                              Fabric[index]['select'] = value;
-                            });
-                          },
+                        value: Clothing[index]['select'],
+                        secondary: Text(Clothing[index]['data']),
+                        controlAffinity: ListTileControlAffinity.leading,
+                        onChanged: (bool value) {
+                          setState(() {
+                            Clothing[index]['select'] = value;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+            Container(
+              child: ListView.builder(
+                  itemCount: Fabric.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: CheckboxListTile(
+                        title: Text(
+                          Fabric[index]['name'],
+                          style: TextStyle(fontSize: 13),
                         ),
-                      );
-                    }),
-              ),
-              Container(
-                child: ListView.builder(
-                    itemCount: Clothing.length,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        child: CheckboxListTile(
-                          title: Text(
-                            Clothing[index]['name'],
-                            style: TextStyle(fontSize: 13),
-                          ),
-                          value: Clothing[index]['select'],
-                          secondary: Text(Clothing[index]['data']),
-                          controlAffinity: ListTileControlAffinity.leading,
-                          onChanged: (bool value) {
-                            setState(() {
-                              Clothing[index]['select'] = value;
-                            });
-                          },
+                        value: Fabric[index]['select'],
+                        secondary: Text(Fabric[index]['data']),
+                        controlAffinity: ListTileControlAffinity.leading,
+                        onChanged: (bool value) {
+                          setState(() {
+                            Fabric[index]['select'] = value;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+            Container(
+              child: ListView.builder(
+                  itemCount: Clothing.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: CheckboxListTile(
+                        title: Text(
+                          Clothing[index]['name'],
+                          style: TextStyle(fontSize: 13),
                         ),
-                      );
-                    }),
-              ),
-              Container(
-                child: ListView.builder(
-                    itemCount: Fabric.length,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        child: CheckboxListTile(
-                          title: Text(
-                            Fabric[index]['name'],
-                            style: TextStyle(fontSize: 13),
-                          ),
-                          value: Fabric[index]['select'],
-                          secondary: Text(Fabric[index]['data']),
-                          controlAffinity: ListTileControlAffinity.leading,
-                          onChanged: (bool value) {
-                            setState(() {
-                              Fabric[index]['select'] = value;
-                            });
-                          },
+                        value: Clothing[index]['select'],
+                        secondary: Text(Clothing[index]['data']),
+                        controlAffinity: ListTileControlAffinity.leading,
+                        onChanged: (bool value) {
+                          setState(() {
+                            Clothing[index]['select'] = value;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+            Container(
+              child: ListView.builder(
+                  itemCount: Fabric.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: CheckboxListTile(
+                        title: Text(
+                          Fabric[index]['name'],
+                          style: TextStyle(fontSize: 13),
                         ),
-                      );
-                    }),
-              ),
-              Container(
-                child: ListView.builder(
-                    itemCount: Clothing.length,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        child: CheckboxListTile(
-                          title: Text(
-                            Clothing[index]['name'],
-                            style: TextStyle(fontSize: 13),
-                          ),
-                          value: Clothing[index]['select'],
-                          secondary: Text(Clothing[index]['data']),
-                          controlAffinity: ListTileControlAffinity.leading,
-                          onChanged: (bool value) {
-                            setState(() {
-                              Clothing[index]['select'] = value;
-                            });
-                          },
+                        value: Fabric[index]['select'],
+                        secondary: Text(Fabric[index]['data']),
+                        controlAffinity: ListTileControlAffinity.leading,
+                        onChanged: (bool value) {
+                          setState(() {
+                            Fabric[index]['select'] = value;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+            Container(
+              child: ListView.builder(
+                  itemCount: Clothing.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: CheckboxListTile(
+                        title: Text(
+                          Clothing[index]['name'],
+                          style: TextStyle(fontSize: 13),
                         ),
-                      );
-                    }),
-              ),
-              Container(
-                child: ListView.builder(
-                    itemCount: Fabric.length,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        child: CheckboxListTile(
-                          title: Text(
-                            Fabric[index]['name'],
-                            style: TextStyle(fontSize: 13),
-                          ),
-                          value: Fabric[index]['select'],
-                          secondary: Text(Fabric[index]['data']),
-                          controlAffinity: ListTileControlAffinity.leading,
-                          onChanged: (bool value) {
-                            setState(() {
-                              Fabric[index]['select'] = value;
-                            });
-                          },
+                        value: Clothing[index]['select'],
+                        secondary: Text(Clothing[index]['data']),
+                        controlAffinity: ListTileControlAffinity.leading,
+                        onChanged: (bool value) {
+                          setState(() {
+                            Clothing[index]['select'] = value;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+            Container(
+              child: ListView.builder(
+                  itemCount: Fabric.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: CheckboxListTile(
+                        title: Text(
+                          Fabric[index]['name'],
+                          style: TextStyle(fontSize: 13),
                         ),
-                      );
-                    }),
-              ),
-              Container(
-                child: ListView.builder(
-                    itemCount: Clothing.length,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        child: CheckboxListTile(
-                          title: Text(
-                            Clothing[index]['name'],
-                            style: TextStyle(fontSize: 13),
-                          ),
-                          value: Clothing[index]['select'],
-                          secondary: Text(Clothing[index]['data']),
-                          controlAffinity: ListTileControlAffinity.leading,
-                          onChanged: (bool value) {
-                            setState(() {
-                              Clothing[index]['select'] = value;
-                            });
-                          },
+                        value: Fabric[index]['select'],
+                        secondary: Text(Fabric[index]['data']),
+                        controlAffinity: ListTileControlAffinity.leading,
+                        onChanged: (bool value) {
+                          setState(() {
+                            Fabric[index]['select'] = value;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+            Container(
+              child: ListView.builder(
+                  itemCount: Clothing.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: CheckboxListTile(
+                        title: Text(
+                          Clothing[index]['name'],
+                          style: TextStyle(fontSize: 13),
                         ),
-                      );
-                    }),
+                        value: Clothing[index]['select'],
+                        secondary: Text(Clothing[index]['data']),
+                        controlAffinity: ListTileControlAffinity.leading,
+                        onChanged: (bool value) {
+                          setState(() {
+                            Clothing[index]['select'] = value;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
+          child: RaisedButton(
+            padding: EdgeInsets.all(10.0),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: Text(
+              "Apply",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
               ),
-            ],
-          )),
+              textAlign: TextAlign.center,
+            ),
+            color: Colors.blue,
+            shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(5.0),
+              side: BorderSide(color: Colors.blueAccent),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
