@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'Home/Clothing/subpage.dart';
 import 'package:udaan/Login/splash.dart';
 import 'package:udaan/Home/navbar.dart';
 import 'Home/KYC/shop_kyc.dart';
@@ -12,7 +12,7 @@ void main() => runApp(MaterialApp(
         '/navbar': (context) => Navbar(),
         '/splash': (context) => Splash(),
         '/shopkyc': (context) => Shopkyc(),
-     
         '/home': (context) => Home(),
+        '/subpage': (context) => Subpage()
       },
     ));

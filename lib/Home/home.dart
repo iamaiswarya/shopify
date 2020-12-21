@@ -1,9 +1,9 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
+import 'package:udaan/Home/Clothing/common.dart';
+import 'package:udaan/Home/Clothing/fabric.dart';
 import 'package:udaan/Home/Clothing/kidswear.dart';
+import 'package:udaan/Home/Clothing/subpage.dart';
 import 'package:udaan/Home/KYC/shop_kyc.dart';
-import 'package:udaan/Home/UdaanHome/Menswear/MensWearHome.dart';
 import 'package:udaan/Home/UdaanHome/Menswear/Search.dart';
 import 'package:udaan/Home/menudrawer.dart';
 import 'package:udaan/Home/orderforms.dart';
@@ -78,10 +78,13 @@ class Home extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height / 18,
           child: GestureDetector(
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Searchpage()));   
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => Searchpage()));
             },
-                      child: Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('  Search',
@@ -169,7 +172,22 @@ class Home extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (BuildContext context) => Menswear()));
+                                builder: (BuildContext context) => Common(
+                                      heading: 'Menswear',
+                                      items: '32656 items found',
+                                      image1: "assets/account/mens1.jpg",
+                                      image2: "assets/account/mens2.jpg",
+                                      image3: "assets/account/mens3.jpg",
+                                      image4: "assets/account/mens4.jpg",
+                                      image5: "assets/account/mens1.jpg",
+                                      image6: "assets/account/mens2.jpg",
+                                      texta: "Tom Hiddle Cotton . . . .",
+                                      textb: "Tom Hiddle Cotton . . . .",
+                                      textc: "Tom Hiddle Cotton . . . .",
+                                      textd: "Tom Hiddle Cotton . . . .",
+                                      texte: "Tom Hiddle Cotton . . . .",
+                                      textf: "Tom Hiddle Cotton . . . .",
+                                    )));
                       },
                     ),
                   ),
@@ -179,9 +197,32 @@ class Home extends StatelessWidget {
                   height: MediaQuery.of(context).size.height / 5.6,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Image(
-                      image: AssetImage('assets/homecloth/womenswear.jpg'),
-                      fit: BoxFit.fill,
+                    child: GestureDetector(
+                      child: Image(
+                        image: AssetImage('assets/homecloth/womenswear.jpg'),
+                        fit: BoxFit.fill,
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Common(
+                                      heading: 'Womens Wear',
+                                      items: '20641 items found',
+                                      image1: "assets/homecloth/women/w1.jpg",
+                                      image2: "assets/homecloth/women/w2.jpg",
+                                      image3: "assets/homecloth/women/w3.jpg",
+                                      image4: "assets/homecloth/women/w4.jpg",
+                                      image5: "assets/homecloth/women/w1.jpg",
+                                      image6: "assets/homecloth/women/w2.jpg",
+                                      texta: "NSB Garments Printed",
+                                      textb: "Fashion Haat",
+                                      textc: "Zadine Imported",
+                                      textd: "B&C Single Jersy",
+                                      texte: "NSB Garments Printed",
+                                      textf: "Fashion Haat",
+                                    )));
+                      },
                     ),
                   ),
                 ),
@@ -214,15 +255,16 @@ class Home extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: GestureDetector(
-                          onTap: () {
+                      onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (BuildContext context) => FashionAcessoriesHome()));
+                                builder: (BuildContext context) =>
+                                    FashionAcessoriesHome()));
                       },
-                                          child: Image(
-                        image:
-                            AssetImage('assets/homecloth/fashionaccessories.jpg'),
+                      child: Image(
+                        image: AssetImage(
+                            'assets/homecloth/fashionaccessories.jpg'),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -244,9 +286,17 @@ class Home extends StatelessWidget {
                   height: MediaQuery.of(context).size.height / 5.6,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Image(
-                      image: AssetImage('assets/homecloth/fabric.jpg'),
-                      fit: BoxFit.fill,
+                    child: GestureDetector(
+                      child: Image(
+                        image: AssetImage('assets/homecloth/fabric.jpg'),
+                        fit: BoxFit.fill,
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Fabric()));
+                      },
                     ),
                   ),
                 ),

@@ -5,14 +5,8 @@ import 'package:udaan/Home/UdaanHome/Menswear/Udaan.dart';
 import 'package:udaan/Home/UdaanHome/Menswear/filtertab.dart';
 import 'package:udaan/Home/orderforms.dart';
 import 'package:share/share.dart';
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: infantGiftSub() ,
-  ));
-}
 
-class infantGiftSub extends StatelessWidget {
+class InfantGiftSub extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,10 +20,13 @@ class infantGiftSub extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height / 20,
           child: GestureDetector(
-            onTap: (){
-             Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Searchpage()));  
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => Searchpage()));
             },
-                      child: Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
@@ -210,8 +207,7 @@ class infantGiftSub extends StatelessWidget {
         builder: (builder) {
           return Container(
             child: GestureDetector(
-              onTap: () {
-                              },
+              onTap: () {},
               child: Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Text('Share Link with ......'),
