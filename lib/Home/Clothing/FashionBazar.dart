@@ -643,7 +643,9 @@ class MenswearCard extends StatelessWidget {
                     //crossAxisAlignment: CrossAxisAlignment.center,
                     //mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.shopping_cart_outlined),
+                      Image(
+                        image: AssetImage("assets/FashionBazar/bestseller.png"),
+                      ),
                       SizedBox(width: 8,),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
