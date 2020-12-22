@@ -150,6 +150,13 @@ flutter:
     - assets/FashionAccessories/WomensEarring.jpg
     - assets/FashionAccessories/Necklace.jpg
     - assets/FashionAccessories/WomenBracelet.jpg
+
+    - assets/FashionAccessories/
+    - assets/FashionBazar/
+    - assets/VKTraders/
+    - assets/HindustanClothMills/
+    
+
     
     - assets/kyc/
     - assets/kids/
@@ -166,6 +173,10 @@ flutter:
     - assets/homecloth/kids/kidssub/
     - assets/homecloth/fabric/
     - assets/homecloth/women/
+    - assets/homecloth/men/
+    
+    - assets/Dresses/
+    - assets/homecloth/Bag/
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -3,6 +3,19 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:udaan/Home/orderforms.dart';
 import 'package:share/share.dart';
+import 'package:udaan/Home/Clothing/FashionAccessories/WomenEarring.dart';
+import 'package:udaan/Home/Clothing/FashionAccessories/NecklaceSet.dart';
+import 'package:udaan/Home/Clothing/FashionAccessories/Necklace.dart';
+import 'package:udaan/Home/Clothing/FashionAccessories/WomensBracelet.dart';
+import 'package:udaan/Home/Clothing/FashionAccessories/Backpack.dart';
+import 'package:udaan/Home/Clothing/FashionAccessories/HairClip.dart';
+import 'package:udaan/Home/Clothing/FashionAccessories/SchoolBag.dart';
+import 'package:udaan/Home/Clothing/FashionAccessories/HandBag.dart';
+import 'package:udaan/Home/Clothing/FashionAccessories/Wallet.dart';
+import 'package:udaan/Home/Clothing/FashionAccessories/HairBand.dart';
+import 'package:udaan/Home/Clothing/FashionAccessories/HairJewellery.dart';
+import 'package:udaan/Home/Clothing/FashionAccessories/HairExtension.dart';
+
 class FashionAcessoriesHome extends StatefulWidget {
   @override
   _FashionAcessoriesHomeState createState() => _FashionAcessoriesHomeState();
@@ -160,55 +173,62 @@ class _FashionAcessoriesHomeState extends State<FashionAcessoriesHome> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/FashionAccessories/WomensEarring.jpg',
-                            'Womens Earring',
+                          GestureDetector(
+                             onTap: (){
+                               Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>WomenEarring()));
+                            },
+                                                      child: sub(
+                              'assets/FashionAccessories/WomensEarring.jpg',
+                              'Womens Earring',
+                            ),
                           ),
-                          sub(
+                           GestureDetector(
+                             onTap: (){
+                               Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>NecklaceSet()));
+                            },
+                         child: sub(
                             'assets/FashionAccessories/FashionJewellery.jpg',
                             'Necklace Set',
-                          )
+                          ),
+                           ),
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/FashionAccessories/Necklace.jpg',
-                            'Necklace',
+                          GestureDetector(
+                            onTap: (){
+                               Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>Necklace()));
+                            },
+                                                      child: sub(
+                              'assets/FashionAccessories/Necklace.jpg',
+                              'Necklace',
+                            ),
                           ),
-                          sub(
-                            'assets/FashionAccessories/WomenBracelet.jpg',
-                            'Women Bracelet',
+                          GestureDetector(
+                              onTap: (){
+                               Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>WomensBracelet()));
+                            },
+                                                      child: sub(
+                              'assets/FashionAccessories/WomenBracelet.jpg',
+                              'Women Bracelet',
+                            ),
                           )
                         ],
                       ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      //   children: [
-                      //     sub(
-                      //       'assets/homecloth/kids/babyfrock.jpg',
-                      //       'Baby Frock',
-                      //     ),
-                      //     sub(
-                      //       'assets/homecloth/kids/babytopbottom.jpg',
-                      //       'Baby Top \nBottom Set',
-                      //     )
-                      //   ],
-                      // ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      //   children: [
-                      //     sub(
-                      //       'assets/homecloth/kids/babybooties.jpg',
-                      //       'Baby Booties',
-                      //     ),
-                      //     sub(
-                      //       'assets/homecloth/kids/babytshirt.jpg',
-                      //       'Baby Tshirt',
-                      //     )
-                      //   ],
-                      // ),
+                  
                     ],
                   ),
                   ExpansionTile(
@@ -226,26 +246,59 @@ class _FashionAcessoriesHomeState extends State<FashionAcessoriesHome> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/FashionAccessories/Backpack.jpg',
-                            'Backpack/ ..',
+                          GestureDetector(
+                            onTap: (){
+                               Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>Backpack()));
+                            },
+                                                      child: sub(
+                              'assets/FashionAccessories/Backpack.jpg',
+                              'Backpack/ ..',
+                            ),
                           ),
-                          sub(
-                            'assets/FashionAccessories/Schoolbag.jpg',
-                            'School Bag',
+                          GestureDetector(
+                            onTap: (){
+                               Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>SchoolBag()));
+                            },
+                                                      child: sub(
+                              'assets/FashionAccessories/Schoolbag.jpg',
+                              'School Bag',
+                            ),
                           )
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/FashionAccessories/HandBag.jpg',
-                            'Hand Bag',
+                          GestureDetector(
+                            onTap: (){
+                                 Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>HandBag()));
+                            },
+                                                      child: sub(
+                              'assets/FashionAccessories/HandBag.jpg',
+                              'Hand Bag',
+                            ),
                           ),
-                          sub(
-                            'assets/FashionAccessories/Wallet.jpg',
-                            'Wallet',
+                          GestureDetector(
+                            onTap: (){
+                                 Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>Wallet()));
+                            },
+                                
+                                                      child: sub(
+                              'assets/FashionAccessories/Wallet.jpg',
+                              'Wallet',
+                            ),
                           )
                         ],
                       ),
@@ -294,13 +347,29 @@ class _FashionAcessoriesHomeState extends State<FashionAcessoriesHome> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/FashionAccessories/HairClip.jpg',
-                            'Hair Clip and Pin',
+                          GestureDetector (
+                                onTap: (){
+                               Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>HairClip()));
+                            },
+                                                      child: sub(
+                              'assets/FashionAccessories/HairClip.jpg',
+                              'Hair Clip and Pin',
+                            ),
                           ),
-                          sub(
-                            'assets/FashionAccessories/HairBand.jpg',
-                            'Hair Band and Tie',
+                          GestureDetector(
+                               onTap: (){
+                               Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>HairBand()));
+                            },
+                                                      child: sub(
+                              'assets/FashionAccessories/HairBand.jpg',
+                              'Hair Band and Tie',
+                            ),
                           )
                         ],
                       ),
@@ -308,13 +377,29 @@ class _FashionAcessoriesHomeState extends State<FashionAcessoriesHome> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/homecloth/kids/kidsweater.jpg',
-                            'Kids Sweater',
+                          GestureDetector(
+                             onTap: (){
+                               Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>HairJewellery()));
+                            },
+                                                      child: sub(
+                              'assets/FashionAccessories/HairJewellery.jpg',
+                              'Hair Jewellery',
+                            ),
                           ),
-                          sub(
-                            'assets/homecloth/kids/kidsjacket.jpg',
-                            'Kids Jacket',
+                          GestureDetector(
+                             onTap: (){
+                               Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>HairExtension()));
+                            },
+                                                      child: sub(
+                              'assets/FashionAccessories/HairExtension.jpg',
+                              'Hair Extension',
+                            ),
                           )
                         ],
                       ),

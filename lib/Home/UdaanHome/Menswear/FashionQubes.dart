@@ -995,13 +995,12 @@ class TableFashion extends StatelessWidget {
                           child: Row(
                             children: [
                               CircleAvatar(
-                                radius: 18,
+                                radius: 15,
                                 backgroundImage: AssetImage(
                                   flag,
                                 ),
                               ),
-                              Expanded(
-                                child: Container(
+                              Container(
                                   color: Colors.indigo,
                                   child: Text(
                                     countryofOrigin,
@@ -1010,7 +1009,7 @@ class TableFashion extends StatelessWidget {
                                         fontSize: 10, color: Colors.white),
                                   ),
                                 ),
-                              ),
+                              
                             ],
                           ),
                         ),
