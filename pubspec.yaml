@@ -177,6 +177,21 @@ flutter:
     
     - assets/Dresses/
     - assets/homecloth/Bag/
+
+    - assets/search/cotton.jfif
+    - assets/search/dress.jpg
+    - assets/search/linen.jfif
+    - assets/search/taffeta.jfif
+    - assets/search/rayon.jpg
+    - assets/search/Georgette.jfif
+    - assets/search/polyster.jfif
+    - assets/search/sarina.jfif
+    - assets/search/net.jfif
+    - assets/search/imported.jfif
+    - assets/search/Denim.jpeg
+    - assets/search/brand1.jpeg
+
+    - assets/search/
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -15,6 +15,15 @@ import 'package:udaan/Home/Clothing/FashionAccessories/Wallet.dart';
 import 'package:udaan/Home/Clothing/FashionAccessories/HairBand.dart';
 import 'package:udaan/Home/Clothing/FashionAccessories/HairJewellery.dart';
 import 'package:udaan/Home/Clothing/FashionAccessories/HairExtension.dart';
+import 'package:udaan/Fashion Accessories/MenEarrings.dart';
+import 'package:udaan/Fashion Accessories/MenBracelet.dart';
+import 'package:udaan/Fashion Accessories/MensFingerRing.dart';
+import 'package:udaan/Fashion Accessories/MenBroach.dart';
+import 'package:udaan/Fashion Accessories/Watches.dart';
+import 'package:udaan/Fashion Accessories/WristBand.dart';
+import 'package:udaan/Fashion Accessories/Caps.dart';
+import 'package:udaan/Fashion Accessories/Belts.dart';
+import 'package:udaan/Fashion Accessories/Sunglasses.dart';
 
 class FashionAcessoriesHome extends StatefulWidget {
   @override
@@ -305,33 +314,62 @@ class _FashionAcessoriesHomeState extends State<FashionAcessoriesHome> {
                      
                     ],
                   ),
-                    ListTile(
-                    leading: Image(
-                      image:
-                          AssetImage('assets/FashionAccessories/Watch.jpg'),
-                    ),
-                    title: Text('Watches',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    trailing: Icon(Icons.chevron_right),
+                    GestureDetector(
+                                          child: ListTile(
+                      leading: 
+                                           Image(
+                          image:
+                              AssetImage('assets/FashionAccessories/Watch.jpg'),
+                        ),
+                       onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) => Watches()));
+                                        
+                        },    
+                      
+                      title: Text('Watches',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      trailing: Icon(Icons.chevron_right),
                   ),
-                    ListTile(
-                    leading: Image(
-                      image:
-                          AssetImage('assets/FashionAccessories/Cap.jpg'),
                     ),
-                    title: Text('Caps',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    trailing: Icon(Icons.chevron_right),
+                    GestureDetector(
+                                          child: ListTile(
+                      leading: Image(
+                        image:
+                            AssetImage('assets/FashionAccessories/Cap.jpg'),
+                      ),
+                       onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) => Caps()));
+                                        
+                        },    
+                      title: Text('Caps',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      trailing: Icon(Icons.chevron_right),
                   ),
-                   ListTile(
-                    leading: Image(
-                      image:
-                          AssetImage('assets/FashionAccessories/Belts.jpg'),
                     ),
-                    title: Text('Belts',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    trailing: Icon(Icons.chevron_right),
+                     GestureDetector(
+                                        child: ListTile(
+                      leading: Image(
+                        image:
+                            AssetImage('assets/FashionAccessories/Belts.jpg'),
+                      ),
+                       onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) => Belt()));
+                                        
+                        },    
+                      title: Text('Belts',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      trailing: Icon(Icons.chevron_right),
                   ),
+                   ),
                   ExpansionTile(
                     leading: Image(
                       image: AssetImage('assets/FashionAccessories/HairAccessories.jpg'),
@@ -405,14 +443,23 @@ class _FashionAcessoriesHomeState extends State<FashionAcessoriesHome> {
                       ),
                     ],
                   ),
-                  ListTile(
-                    leading: Image(
-                      image:
-                          AssetImage('assets/FashionAccessories/Sunglass.jpg'),
+                   GestureDetector(
+                                      child: ListTile(
+                      leading: Image(
+                        image:
+                            AssetImage('assets/FashionAccessories/Sunglass.jpg'),
+                      ),
+                      onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) => Sunglasses()));
+                                        
+                        },   
+                      title: Text('Sunglasses',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      trailing: Icon(Icons.chevron_right),
                     ),
-                    title: Text('Sunglasses',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    trailing: Icon(Icons.chevron_right),
                   ),
                   ExpansionTile(
                     leading: Image(
@@ -429,40 +476,87 @@ class _FashionAcessoriesHomeState extends State<FashionAcessoriesHome> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/FashionAccessories/MensEarring.jpg',
-                            'Mens Earrings',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/FashionAccessories/MensEarring.jpg',
+                              'Mens Earrings',
+                            ),
+                            onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => MensEarring()));
+                                      
+                      },   
+
+                      
                           ),
-                          sub(
+                          GestureDetector(
+                       child: sub(
                             'assets/FashionAccessories/MenBracelet.jpg',
                             'Men Bracelet',
-                          )
+                          ),
+                           onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => MensBracelet()));
+                                      
+                      },   
+                          ),
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/FashionAccessories/MensRing.jpg',
-                            'Mens Finger Ring',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/FashionAccessories/MensRing.jpg',
+                              'Mens Finger Ring',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => MensRing()));
+                                      
+                      },   
                           ),
-                          sub(
-                            'assets/FashionAccessories/MenBroach.jpg',
-                            'Men Broach',
+                           GestureDetector(
+                                                      child: sub(
+                              'assets/FashionAccessories/MenBroach.jpg',
+                              'Men Broach',
+                            ),
+                            onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => MenBroach()));
+                                      
+                      },   
                           )
                         ],
                       ),
                     ],
                   ),
                  
-                  ListTile(
-                    leading: Image(
-                      image:
-                          AssetImage('assets/FashionAccessories/WistBands.jpg'),
+                 GestureDetector(
+                                      child: ListTile(
+                      leading: Image(
+                        image:
+                            AssetImage('assets/FashionAccessories/WistBands.jpg'),
+                      ),
+                       onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) => WristBand()));
+                                        
+                        },    
+                      title: Text('Wirst Bands',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      trailing: Icon(Icons.chevron_right),
                     ),
-                    title: Text('Wirst Bands',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    trailing: Icon(Icons.chevron_right),
                   ),
                 ],
               ),

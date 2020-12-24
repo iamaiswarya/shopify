@@ -1,5 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:udaan/Home/orderforms.dart';
+import 'package:udaan/Fabric/cottonfabric1.dart';
+import 'package:udaan/Fabric/Polysterfabric.dart';
+import 'package:udaan/Fabric/importedfabric.dart';
+import 'package:udaan/Fabric/linenfabric.dart';
+import 'package:udaan/Fabric/Sarinafabric.dart';
+import 'package:udaan/Fabric/taffetafabric.dart';
+import 'package:udaan/Fabric/Denim.dart';
+import 'package:udaan/Fabric/Shirt&TrouserFabric.dart';
+import 'package:udaan/Fabric/Button.dart';
+import 'package:udaan/Fabric/Laces.dart';
 import 'package:share/share.dart';
 
 class Fabric extends StatefulWidget {
@@ -114,14 +124,51 @@ class _FabricState extends State<Fabric> {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        MyImage('assets/homecloth/fabric/imported.jpg',
-                            'Imported Fabric  '),
-                        MyImage('assets/homecloth/fabric/linen.jpg',
-                            'Linen Fabric'),
-                        MyImage('assets/homecloth/fabric/polyester.jpg',
-                            'Polyster Fabric'),
-                        MyImage('assets/homecloth/fabric/cotton.jpg',
-                            'Cotton Fabric'),
+                        GestureDetector(
+                                                  child: MyImage('assets/homecloth/fabric/imported.jpg',
+                              'Imported Fabric  '),
+                         onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Importedfabric()));
+                      },
+
+
+                        ),
+                        GestureDetector(
+                                                  child: MyImage('assets/homecloth/fabric/linen.jpg',
+                              'Linen Fabric'),
+                               onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Linenfabric()));
+                      },
+
+                        ),
+                        GestureDetector(
+                                                  child: MyImage('assets/homecloth/fabric/polyester.jpg',
+                              'Polyster Fabric'),
+                               onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Polysterfabric()));
+                      },
+
+                        ),
+                        GestureDetector(
+                                                  child: MyImage('assets/homecloth/fabric/cotton.jpg',
+                              'Cotton Fabric'),
+                               onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => CottonFabric1()));
+                      },
+
+                        ),
                       ],
                     ),
                   ),
@@ -150,26 +197,59 @@ class _FabricState extends State<Fabric> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/homecloth/fabric/cotton.jpg',
-                            'Cotton Fabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/cotton.jpg',
+                              'Cotton Fabric',
+                            ),
+                            onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => CottonFabric1()));
+                            } 
                           ),
-                          sub(
-                            'assets/homecloth/fabric/polyester.jpg',
-                            'Polyester\nFabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/polyester.jpg',
+                              'Polyester\nFabric',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Polysterfabric()));
+                      },
+  
                           )
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/homecloth/fabric/imported.jpg',
-                            'Imported\nFabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/imported.jpg',
+                              'Imported\nFabric',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Importedfabric()));
+                      },
                           ),
-                          sub(
-                            'assets/homecloth/fabric/linen.jpg',
-                            'Linen Fabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/linen.jpg',
+                              'Linen Fabric',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Linenfabric()));
+                      },
                           )
                         ],
                       ),
@@ -191,26 +271,58 @@ class _FabricState extends State<Fabric> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/homecloth/fabric/cotton.jpg',
-                            'Cotton Fabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/cotton.jpg',
+                              'Cotton Fabric',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => CottonFabric1()));
+                            } 
                           ),
-                          sub(
-                            'assets/homecloth/fabric/polyester.jpg',
-                            'Polyester\nFabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/polyester.jpg',
+                              'Polyester\nFabric',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Polysterfabric()));
+                      },
                           )
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/homecloth/fabric/imported.jpg',
-                            'Imported\nFabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/imported.jpg',
+                              'Imported\nFabric',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Importedfabric()));
+                      },
                           ),
-                          sub(
-                            'assets/homecloth/fabric/linen.jpg',
-                            'Linen Fabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/linen.jpg',
+                              'Linen Fabric',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Linenfabric()));
+                      },
                           )
                         ],
                       ),
@@ -232,26 +344,58 @@ class _FabricState extends State<Fabric> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/homecloth/fabric/cotton.jpg',
-                            'Cotton Fabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/cotton.jpg',
+                              'Cotton Fabric',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => CottonFabric1()));
+                            } 
                           ),
-                          sub(
-                            'assets/homecloth/fabric/polyester.jpg',
-                            'Polyester\nFabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/polyester.jpg',
+                              'Polyester\nFabric',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Polysterfabric()));
+                      },
                           )
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/homecloth/fabric/imported.jpg',
-                            'Imported\nFabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/imported.jpg',
+                              'Imported\nFabric',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Importedfabric()));
+                      },
                           ),
-                          sub(
-                            'assets/homecloth/fabric/linen.jpg',
-                            'Linen Fabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/linen.jpg',
+                              'Linen Fabric',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Linenfabric()));
+                      },
                           )
                         ],
                       ),
@@ -273,58 +417,114 @@ class _FabricState extends State<Fabric> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/homecloth/fabric/cotton.jpg',
-                            'Cotton Fabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/cotton.jpg',
+                              'Cotton Fabric',
+                            ),
+                            onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => CottonFabric1()));
+                            } 
                           ),
-                          sub(
-                            'assets/homecloth/fabric/polyester.jpg',
-                            'Polyester\nFabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/polyester.jpg',
+                              'Polyester\nFabric',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Polysterfabric()));
+                      },
                           )
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/homecloth/fabric/imported.jpg',
-                            'Imported\nFabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/imported.jpg',
+                              'Imported\nFabric',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Importedfabric()));
+                      },
                           ),
-                          sub(
-                            'assets/homecloth/fabric/linen.jpg',
-                            'Linen Fabric',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/linen.jpg',
+                              'Linen Fabric',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Linenfabric()));
+                      },
                           )
                         ],
                       ),
                     ],
                   ),
                   Divider(color: Colors.grey[500]),
-                  ListTile(
-                    leading: Image(
-                      image: AssetImage(
-                          'assets/homecloth/fabric/shirttrouser.jpg'),
+                  GestureDetector(
+                                      child: ListTile(
+                      leading: Image(
+                        image: AssetImage(
+                            'assets/homecloth/fabric/shirttrouser.jpg'),
+                      ),
+                      title: Text('Shirt & Trousers Fabrics',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      trailing: Icon(Icons.chevron_right),
                     ),
-                    title: Text('Shirt & Trousers Fabrics',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    trailing: Icon(Icons.chevron_right),
+                   onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Shirt_Trousers()));
+                      }, 
                   ),
                   Divider(color: Colors.grey[500]),
-                  ListTile(
-                    leading: Image(
-                      image: AssetImage('assets/homecloth/fabric/linen.jpg'),
+                  GestureDetector(
+                                      child: ListTile(
+                      leading: Image(
+                        image: AssetImage('assets/homecloth/fabric/linen.jpg'),
+                      ),
+                      title: Text('Linen Fabrics',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      trailing: Icon(Icons.chevron_right),
                     ),
-                    title: Text('Linen Fabrics',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    trailing: Icon(Icons.chevron_right),
+                     onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Linenfabric()));
+                      },
                   ),
                   Divider(color: Colors.grey[500]),
-                  ListTile(
-                    leading: Image(
-                      image: AssetImage('assets/homecloth/fabric/denim.jpg'),
+                  GestureDetector(
+                                      child: ListTile(
+                      leading: Image(
+                        image: AssetImage('assets/homecloth/fabric/denim.jpg'),
+                      ),
+                      title: Text('Denim Fabrics',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      trailing: Icon(Icons.chevron_right),
                     ),
-                    title: Text('Denim Fabrics',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    trailing: Icon(Icons.chevron_right),
+                  onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Denim()));
+                      },  
                   ),
                   Divider(color: Colors.grey[500]),
                   ExpansionTile(
@@ -343,35 +543,67 @@ class _FabricState extends State<Fabric> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          sub(
-                            'assets/homecloth/fabric/laces.jpg',
-                            'Laces/Tapes',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/laces.jpg',
+                              'Laces/Tapes',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Laces_Tapes()));
+                      },
                           ),
-                          sub(
-                            'assets/homecloth/fabric/button.jpg',
-                            'Buttons',
+                          GestureDetector(
+                                                      child: sub(
+                              'assets/homecloth/fabric/button.jpg',
+                              'Buttons',
+                            ),
+                             onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Button()));
+                      },
                           )
                         ],
                       ),
                     ],
                   ),
                   Divider(color: Colors.grey[500]),
-                  ListTile(
-                    leading: Image(
-                      image: AssetImage('assets/homecloth/fabric/tafetta.jpg'),
+                  GestureDetector(
+                                      child: ListTile(
+                      leading: Image(
+                        image: AssetImage('assets/homecloth/fabric/tafetta.jpg'),
+                      ),
+                      title: Text('Taffeta Fabrics',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      trailing: Icon(Icons.chevron_right),
                     ),
-                    title: Text('Taffeta Fabrics',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    trailing: Icon(Icons.chevron_right),
+                    onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Taffetafabric()));
+                      },
                   ),
                   Divider(color: Colors.grey[500]),
-                  ListTile(
-                    leading: Image(
-                      image: AssetImage('assets/homecloth/fabric/sarina.jpg'),
+                  GestureDetector(
+                                      child: ListTile(
+                      leading: Image(
+                        image: AssetImage('assets/homecloth/fabric/sarina.jpg'),
+                      ),
+                      title: Text('Sarina Fabrics',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      trailing: Icon(Icons.chevron_right),
                     ),
-                    title: Text('Sarina Fabrics',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    trailing: Icon(Icons.chevron_right),
+                     onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => Sarinafabric()));
+                      },
                   ),
                 ],
               ),
