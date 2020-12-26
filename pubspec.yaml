@@ -150,6 +150,9 @@ flutter:
     - assets/FashionAccessories/WomensEarring.jpg
     - assets/FashionAccessories/Necklace.jpg
     - assets/FashionAccessories/WomenBracelet.jpg
+    - assets/FashionAccessories/brand1.jpeg
+    - assets/FashionAccessories/brand2.jpeg
+    - assets/FashionAccessories/
     
     - assets/kyc/
     - assets/kids/
@@ -166,6 +169,92 @@ flutter:
     - assets/homecloth/kids/kidssub/
     - assets/homecloth/fabric/
     - assets/homecloth/women/
+
+    - assets/Dresses/kurta1.jpeg
+    - assets/Dresses/kurta2.jpeg
+    - assets/Dresses/kurta3.jpeg
+    - assets/Dresses/kurta4.jpeg
+    - assets/Dresses/kurta5.jpeg
+    - assets/Dresses/kurta6.jpeg
+    - assets/Dresses/trouser1.jpeg
+    - assets/Dresses/trouser2.jpeg
+    - assets/Dresses/trouser3.jpeg
+    - assets/Dresses/trouser4.jpeg
+    - assets/Dresses/trouser5.jpeg
+    - assets/Dresses/trouser6.jpeg
+    - assets/Dresses/w1.jpeg
+    - assets/Dresses/w2.jpeg
+    - assets/Dresses/w3.jpeg
+    - assets/Dresses/w4.jpeg
+    - assets/Dresses/w5.jpeg
+    - assets/Dresses/w6.jpeg
+    - assets/Dresses/s1.jpeg
+    - assets/Dresses/s2.jpeg
+    - assets/Dresses/s3.jpeg
+    - assets/Dresses/s4.jpeg
+    - assets/Dresses/s5.jpeg
+    - assets/Dresses/s6.jpeg
+    - assets/Dresses/kids1.jpeg
+    - assets/Dresses/kids2.jpeg
+    - assets/Dresses/kids3.jpeg
+    - assets/Dresses/kids4.jpeg
+    - assets/Dresses/kids5.jpeg
+    - assets/Dresses/kids6.jpeg
+    - assets/Dresses/J1.jpeg
+    - assets/Dresses/J2.jpeg
+    - assets/Dresses/J3.jpeg
+    - assets/Dresses/J4.jpeg
+    - assets/Dresses/J5.jpeg
+    - assets/Dresses/J6.jpeg
+    - assets/Dresses/kidswear1.jpeg
+    - assets/Dresses/kidswear2.jpeg
+    - assets/Dresses/kidswear3.jpeg
+    - assets/Dresses/kidswear4.jpeg
+    - assets/Dresses/kidswear5.jpeg
+    - assets/Dresses/kidswear6.jpeg
+    - assets/Dresses/kidswear7.jpeg
+    - assets/Dresses/kidswear8.jpeg
+    - assets/Dresses/kidswear9.jpeg
+    - assets/Dresses/kidswear10.jpeg
+    - assets/Dresses/kidswear11.jpeg
+    - assets/Dresses/kidswear12.jpeg
+    - assets/Dresses/kidsjean1.jpeg
+    - assets/Dresses/kidsjean2.jpeg
+    - assets/Dresses/kidsjean3.jpeg
+    - assets/Dresses/kidsjean4.jpeg
+    - assets/Dresses/kidsjean5.jpeg
+    - assets/Dresses/kidsjean6.jpeg
+    -  assets/Dresses/kidstshirt1.jpeg
+    - assets/Dresses/kidsshirt2.jpeg
+    - assets/Dresses/kidsshirt3.jpeg
+    - assets/Dresses/kidsshirt4.jpeg
+    - assets/Dresses/kidsshirt5.jpeg
+    - assets/Dresses/kidsshirt6.jpeg
+    - assets/Dresses/bedsheet1.jpeg
+    - assets/Dresses/bedsheet2.jpeg
+    - assets/Dresses/bedsheet3.jpeg
+    - assets/Dresses/bedsheet4.jpeg
+    - assets/Dresses/bedsheet5.jpeg
+    - assets/Dresses/bedsheet6.jpeg
+    - assets/Dresses/curtain1.jpeg
+    - assets/Dresses/curtain2.jpeg
+    - assets/Dresses/curtain3.jpeg
+    - assets/Dresses/curtain4.jpeg
+    - assets/Dresses/blanket1.jpeg
+    - assets/Dresses/blanket2.jpeg
+    - assets/Dresses/blanket3.jpeg
+    - assets/Dresses/blanket4.jpeg
+    - assets/Dresses/mat1.jpeg
+    - assets/Dresses/mat2.jpeg
+    - assets/Dresses/mat3.jpeg
+    - assets/Dresses/mat4.jpeg
+
+    
+
+
+    
+
+    
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
