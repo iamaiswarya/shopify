@@ -168,31 +168,36 @@ class _MultiSelectDialogState<V> extends State<MultiSelectDialog<V>> {
         ),
       ),
       actions: <Widget>[
-        RaisedButton(
-          padding: EdgeInsets.fromLTRB(20, 10, 40, 10),
-            //padding: EdgeInsets.symmetric(horizontal: 56.0),
+        Center(
+          child: Container(
+            width: MediaQuery.of(context).size.width,
+            child: RaisedButton(
+              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+              //padding: EdgeInsets.symmetric(horizontal: 56.0),
 
-          onPressed: () {
-            Navigator.pop(context);
-            Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                    builder: (BuildContext context) => Mobilenumber()));
-          },
-          child: Center(
-            child: Text(
-              "Accept & Continue",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
+              onPressed: () {
+                Navigator.pop(context);
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => Mobilenumber()));
+              },
+              child: Center(
+                child: Text(
+                  "Accept & Continue",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
               ),
-              textAlign: TextAlign.center,
+              color: Colors.blue,
+              shape: RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(5.0),
+                side: BorderSide(color: Colors.blueAccent),
+              ),
             ),
-          ),
-          color: Colors.blue,
-          shape: RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(5.0),
-            side: BorderSide(color: Colors.blueAccent),
           ),
         ),
       ],
